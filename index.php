@@ -28,11 +28,12 @@ try {
     $debug_info[] = "Usando servicios por defecto";
     
     // Si hay error, usar servicios por defecto
-    $services = [
-        ['title' => 'Diseño Web', 'description' => 'Sitios web profesionales y responsivos', 'price' => 50000],
-        ['title' => 'Marketing Digital', 'description' => 'Estrategias de marketing online', 'price' => 30000],
-        ['title' => 'SEO', 'description' => 'Optimización para motores de búsqueda', 'price' => 25000]
-    ];
+       $services = [
+           ['title' => 'Diseño Web', 'description' => 'Sitios web profesionales y responsivos', 'price' => 50000],
+           ['title' => 'Marketing Digital', 'description' => 'Estrategias de marketing online', 'price' => 30000],
+           ['title' => 'SEO', 'description' => 'Optimización para motores de búsqueda', 'price' => 25000],
+           ['title' => 'Códigos QR Innovadores', 'description' => 'QR personalizados con diseño único y efectos visuales', 'price' => 15000]
+       ];
 }
 ?>
 
@@ -41,7 +42,28 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo SITE_NAME; ?> - Encendemos tu presencia online</title>
+    <!-- Título actualizado - v2.0 -->
+    <title>Fosforo Web - Encendemos tu presencia online</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Fosforo Web - Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores. Encendemos tu presencia online en Mendoza, Argentina.">
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="diseño web, marketing digital, SEO, códigos QR, desarrollo web, Mendoza, Argentina, presencia online">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fosforoweb.com.ar/">
+    <meta property="og:title" content="Fosforo Web - Encendemos tu presencia online">
+    <meta property="og:description" content="Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores.">
+    <meta property="og:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fosforoweb.com.ar/">
+    <meta property="twitter:title" content="Fosforo Web - Encendemos tu presencia online">
+    <meta property="twitter:description" content="Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores.">
+    <meta property="twitter:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
@@ -63,7 +85,10 @@ try {
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h2><?php echo SITE_NAME; ?></h2>
+                    <a href="#inicio" class="nav-logo-link">
+                        <img src="assets/images/qr-logo-fosforo.svg" alt="Fosforo Web QR Logo" class="nav-logo-img">
+                        <h2 class="nav-logo-text"><?php echo SITE_NAME; ?></h2>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -112,6 +137,37 @@ try {
         </div>
     </section>
 
+    <!-- QR Showcase Section -->
+    <section class="qr-showcase">
+        <div class="container">
+            <div class="qr-showcase-content">
+                <div class="qr-info">
+                    <h2 class="section-title">Nuestra Marca Única</h2>
+                    <p class="section-subtitle">Transformamos códigos QR en experiencias visuales únicas</p>
+                    <div class="qr-features">
+                        <div class="feature-item">
+                            <i class="fas fa-magic"></i>
+                            <span>Diseño personalizado con tu marca</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette"></i>
+                            <span>Efectos visuales y animaciones</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Funcionalidad garantizada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr-visual">
+                    <div class="qr-container">
+                        <img src="assets/images/qr-logo-fosforo.svg" alt="Fosforo Web QR Logo" class="qr-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="servicios" class="services">
         <div class="container">
@@ -128,9 +184,10 @@ try {
                     </div>
                     <h3 class="service-title"><?php echo htmlspecialchars($service['title']); ?></h3>
                     <p class="service-description"><?php echo htmlspecialchars($service['description']); ?></p>
-                    <div class="service-price">
+                    <!-- Precios ocultos temporalmente -->
+                    <!-- <div class="service-price">
                         <span class="price">$<?php echo number_format($service['price'], 0, ',', '.'); ?></span>
-                    </div>
+                    </div> -->
                     <a href="#contacto" class="service-btn">Consultar</a>
                 </div>
                 <?php endforeach; ?>
@@ -240,28 +297,97 @@ try {
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><?php echo SITE_NAME; ?></h3>
-                    <p>Encendemos tu presencia online con soluciones digitales profesionales.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#servicios">Diseño Web</a></li>
-                        <li><a href="#servicios">Marketing Digital</a></li>
-                        <li><a href="#servicios">SEO</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>info@fosforoweb.com.ar</p>
-                    <p>+54 261 559-7977</p>
-                    <p>Godoy Cruz, Mendoza, Argentina</p>
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- Sección Empresa -->
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h4><?php echo SITE_NAME; ?></h4>
+                            <p class="footer-tagline">Encendemos tu presencia online</p>
+                        </div>
+                        <p class="footer-description">Creamos soluciones digitales profesionales que impulsan tu negocio hacia el éxito digital. Desde el diseño hasta el marketing, te acompañamos en cada paso.</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección Servicios -->
+                    <div class="footer-section">
+                        <h4>Nuestros Servicios</h4>
+                        <ul class="footer-links">
+                            <li><a href="#servicios"><i class="fas fa-paint-brush"></i> Diseño Web</a></li>
+                            <li><a href="#servicios"><i class="fas fa-chart-line"></i> Marketing Digital</a></li>
+                            <li><a href="#servicios"><i class="fas fa-search"></i> SEO</a></li>
+                            <li><a href="#servicios"><i class="fas fa-qrcode"></i> Códigos QR Innovadores</a></li>
+                            <li><a href="#servicios"><i class="fas fa-shopping-cart"></i> E-commerce</a></li>
+                            <li><a href="#servicios"><i class="fas fa-server"></i> Hosting</a></li>
+                            <li><a href="#servicios"><i class="fas fa-tools"></i> Mantenimiento</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Sección Enlaces -->
+                    <div class="footer-section">
+                        <h4>Enlaces Útiles</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li><a href="#servicios"><i class="fas fa-briefcase"></i> Servicios</a></li>
+                            <li><a href="#nosotros"><i class="fas fa-users"></i> Nosotros</a></li>
+                            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Política de Privacidad</a></li>
+                            <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Sección Contacto -->
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span>Email</span>
+                                    <a href="mailto:info@fosforoweb.com.ar">info@fosforoweb.com.ar</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span>Teléfono</span>
+                                    <a href="tel:+542615597977">+54 261 559-7977</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span>Ubicación</span>
+                                    <span>Godoy Cruz, Mendoza, Argentina</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span>Horarios</span>
+                                    <span>Lun - Vie: 9:00 - 18:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>. Todos los derechos reservados.</p>
+                <div class="footer-bottom-content">
+                    <div class="footer-bottom-left">
+                        <p>&copy; <?php echo date("Y"); ?> <?php echo SITE_NAME; ?>. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <p>Desarrollado con <i class="fas fa-heart"></i> en Mendoza, Argentina</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -289,6 +415,7 @@ function getServiceIcon($title) {
         'Diseño Web' => 'paint-brush',
         'Marketing Digital' => 'chart-line',
         'SEO' => 'search',
+        'Códigos QR Innovadores' => 'qrcode',
         'E-commerce' => 'shopping-cart',
         'Hosting' => 'server',
         'Mantenimiento' => 'tools'

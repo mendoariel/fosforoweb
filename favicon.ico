@@ -1,2 +1,72 @@
-<!-- Placeholder para favicon.ico -->
-<!-- Este archivo será reemplazado por un ICO real -->
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente de fondo oscuro -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradiente azul eléctrico para elementos principales -->
+    <linearGradient id="electricBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0099cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006699;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para el centro brillante -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#00d4ff;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <!-- Filtro de brillo/glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo cuadrado con bordes redondeados -->
+  <rect width="300" height="300" rx="20" fill="url(#bgGradient)"/>
+  
+  <!-- Cuadrados principales (esquinas) -->
+  <rect x="30" y="30" width="60" height="60" rx="12" fill="url(#electricBlue)" filter="url(#glow)"/>
+  <rect x="210" y="30" width="60" height="60" rx="12" fill="url(#electricBlue)" filter="url(#glow)"/>
+  <rect x="30" y="210" width="60" height="60" rx="12" fill="url(#electricBlue)" filter="url(#glow)"/>
+  
+  <!-- Centro brillante con "F" -->
+  <rect x="120" y="120" width="60" height="60" rx="15" fill="url(#centerGlow)" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Letra "F" en el centro -->
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="36" font-weight="800" text-anchor="middle" fill="#000000">
+    F
+  </text>
+  
+  <!-- Puntos pequeños (6 puntos) -->
+  <circle cx="90" cy="90" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="90" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="90" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="120" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="150" cy="120" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="150" r="8" fill="url(#electricBlue)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>
