@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Favicon - Fosforo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+        .upload-area {
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            background: #f8f9ff;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+            display: inline-block;
+        }
+        .preview {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .download-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Generador de Favicon - Fosforo Web</h1>
+        
+        <div class="upload-area">
+            <h3>📁 Sube tu logo de Fosforo Web</h3>
+            <input type="file" id="logoInput" accept="image/*">
+            <p>Formatos soportados: PNG, JPG, SVG</p>
+        </div>
+        
+        <div class="preview" id="preview" style="display: none;">
+            <h3>👀 Vista previa de favicons generados:</h3>
+            <div id="canvasContainer"></div>
+        </div>
+        
+        <div class="download-section" id="downloadSection" style="display: none;">
+            <h3>📥 Descargar favicons:</h3>
+            <button onclick="downloadFavicon(16)">Favicon 16x16</button>
+            <button onclick="downloadFavicon(32)">Favicon 32x32</button>
+            <button onclick="downloadFavicon(48)">Favicon 48x48</button>
+            <button onclick="downloadFavicon(192)">Android 192x192</button>
+            <button onclick="downloadFavicon(512)">Android 512x512</button>
+            <button onclick="downloadAll()">📦 Descargar todos</button>
+        </div>
+    </div>
+
+    <script>
+        let originalImage = null;
+        let canvases = {};
+
+        document.getElementById('logoInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const img = new Image();
+                    img.onload = function() {
+                        originalImage = img;
+                        generateFavicons();
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function generateFavicons() {
+            if (!originalImage) return;
+
+            const sizes = [16, 32, 48, 192, 512];
+            const container = document.getElementById('canvasContainer');
+            container.innerHTML = '';
+
+            sizes.forEach(size => {
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                canvas.id = `favicon-${size}`;
+                canvas.title = `Favicon ${size}x${size}`;
+                
+                const ctx = canvas.getContext('2d');
+                
+                // Fondo blanco
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, size, size);
+                
+                // Dibujar imagen redimensionada
+                ctx.drawImage(originalImage, 0, 0, size, size);
+                
+                // Borde sutil
+                ctx.strokeStyle = '#ddd';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(0, 0, size, size);
+                
+                container.appendChild(canvas);
+                canvases[size] = canvas;
+            });
+
+            document.getElementById('preview').style.display = 'block';
+            document.getElementById('downloadSection').style.display = 'block';
+        }
+
+        function downloadFavicon(size) {
+            if (!canvases[size]) return;
+            
+            const canvas = canvases[size];
+            const link = document.createElement('a');
+            link.download = `favicon-${size}x${size}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function downloadAll() {
+            const sizes = [16, 32, 48, 192, 512];
+            sizes.forEach(size => {
+                setTimeout(() => downloadFavicon(size), size * 10);
+            });
+        }
+
+        // Cargar automáticamente la imagen si existe
+        window.onload = function() {
+            const img = new Image();
+            img.onload = function() {
+                originalImage = img;
+                generateFavicons();
+            };
+            img.onerror = function() {
+                console.log('No se pudo cargar la imagen automáticamente');
+            };
+            img.src = 'assets/fosforo-web.png';
+        };
+    </script>
+</body>
+</html>
