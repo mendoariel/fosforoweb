@@ -13,7 +13,7 @@ if ($isDocker) {
     define('DEBUG_MODE', true);
 } else {
     // Entorno de producción
-    define('DB_HOST', 'a0020600.ferozo.com');
+    define('DB_HOST', 'localhost');
     define('DB_USER', 'a0020600_fosforo');
     define('DB_PASS', 'mefaKlzu18');
     define('DB_NAME', 'a0020600_fosforo');
