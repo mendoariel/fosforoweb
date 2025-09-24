@@ -1,0 +1,31 @@
+# Configuración para Fosforo Web
+RewriteEngine On
+
+# Configurar index por defecto
+DirectoryIndex index.php index.html
+
+# Permitir acceso a archivos PHP
+<Files "*.php">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Permitir acceso a archivos CSS y JS
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Configurar headers de seguridad
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Configurar charset UTF-8
+AddDefaultCharset UTF-8
+
+# Configurar tipos MIME
+AddType text/css .css
+AddType application/javascript .js

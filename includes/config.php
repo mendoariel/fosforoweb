@@ -23,7 +23,6 @@ if ($isDocker) {
 
 // Configuración del sitio
 define('SITE_NAME', 'Fosforo Web');
-define('SITE_URL', 'https://fosforoweb.com.ar');
 define('SITE_EMAIL', 'info@fosforoweb.com.ar');
 
 // Configuración de seguridad
@@ -41,6 +40,5 @@ define('SMTP_USER', 'tu_email@gmail.com');
 define('SMTP_PASS', 'tu_password');
 
 // Configuración de desarrollo
-define('DEBUG_MODE', true);
 define('LOG_ERRORS', true);
 ?>
