@@ -15,6 +15,9 @@ ssl/*.pem
 env.local
 env.production
 
+# Documentation with sensitive info
+CREDENCIALES-BD.md
+
 # Database
 *.sql
 *.db
