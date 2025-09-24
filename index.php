@@ -44,10 +44,12 @@ try {
     <title><?php echo SITE_NAME; ?> - Encendemos tu presencia online</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg?v=2">
+    <link rel="shortcut icon" href="favicon.ico?v=2">
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
