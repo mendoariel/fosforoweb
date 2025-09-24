@@ -14,8 +14,8 @@ if ($isDocker) {
 } else {
     // Entorno de producción
     define('DB_HOST', 'localhost');
-    define('DB_USER', 'a0020600_fosforo_app');
-    define('DB_PASS', 'fosforo123');
+    define('DB_USER', 'a0020600_mendo');
+    define('DB_PASS', 'Fosforo1234');
     define('DB_NAME', 'a0020600_fosforo');
     define('SITE_URL', 'https://fosforoweb.com.ar');
     define('DEBUG_MODE', false);
