@@ -194,14 +194,14 @@ try {
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Teléfono</h4>
-                            <p>+54 11 1234-5678</p>
+                            <p>+54 261 559-7977</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Ubicación</h4>
-                            <p>Buenos Aires, Argentina</p>
+                            <p>Godoy Cruz, Mendoza, Argentina</p>
                         </div>
                     </div>
                 </div>
@@ -244,7 +244,8 @@ try {
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p>info@fosforoweb.com.ar</p>
-                    <p>+54 11 1234-5678</p>
+                    <p>+54 261 559-7977</p>
+                    <p>Godoy Cruz, Mendoza, Argentina</p>
                 </div>
             </div>
             <div class="footer-bottom">

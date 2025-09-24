@@ -24,6 +24,8 @@ if ($isDocker) {
 // Configuración del sitio
 define('SITE_NAME', 'Fosforo Web');
 define('SITE_EMAIL', 'info@fosforoweb.com.ar');
+define('SITE_PHONE', '+54 261 559-7977');
+define('SITE_ADDRESS', 'Godoy Cruz, Mendoza, Argentina');
 
 // Configuración de seguridad
 define('SECRET_KEY', 'tu_clave_secreta_aqui');
