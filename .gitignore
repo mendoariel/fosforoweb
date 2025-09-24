@@ -8,10 +8,12 @@ ssl/*.crt
 ssl/*.key
 ssl/*.pem
 
-# Environment variables
+# Environment variables (sensitive)
 .env
 .env.local
 .env.production
+env.local
+env.production
 
 # Database
 *.sql
@@ -36,3 +38,37 @@ npm-debug.log*
 # Cache
 cache/
 *.cache
+
+# Docker
+.docker/
+docker-data/
+docker-compose.override.yml
+.dockerignore
+
+# Docker volumes and data
+volumes/
+data/
+mysql-data/
+redis-data/
+
+# Docker logs
+docker-compose.logs
+
+# Backup files
+backup/
+backup_*/
+*.backup
+*.bak
+
+# Uploads and user content
+uploads/
+user-uploads/
+temp-uploads/
+
+# Composer (if using)
+vendor/
+composer.lock
+
+# Development tools
+.phpunit.result.cache
+.php-cs-fixer.cache
