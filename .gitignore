@@ -39,7 +39,7 @@ npm-debug.log*
 cache/
 *.cache
 
-# Docker
+# Docker (archivos de configuración se suben al repo)
 .docker/
 docker-data/
 docker-compose.override.yml
