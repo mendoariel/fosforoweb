@@ -4,14 +4,29 @@ require_once 'includes/functions.php';
 
 // Obtener servicios de la base de datos
 $services = [];
+$debug_info = [];
 try {
     $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
+    $debug_info[] = "✅ Conexión exitosa a BD";
+    $debug_info[] = "Host: " . DB_HOST;
+    $debug_info[] = "DB: " . DB_NAME;
+    $debug_info[] = "User: " . DB_USER;
+    
     $stmt = $conn->prepare("SELECT * FROM services WHERE active = 1 ORDER BY id ASC LIMIT 6");
     $stmt->execute();
     $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    $debug_info[] = "✅ Consulta exitosa - " . count($services) . " servicios encontrados";
+    foreach($services as $service) {
+        $debug_info[] = "Servicio: " . $service['title'] . " - $" . $service['price'];
+    }
+    
 } catch(PDOException $e) {
+    $debug_info[] = "❌ Error BD: " . $e->getMessage();
+    $debug_info[] = "Usando servicios por defecto";
+    
     // Si hay error, usar servicios por defecto
     $services = [
         ['title' => 'Diseño Web', 'description' => 'Sitios web profesionales y responsivos', 'price' => 50000],
@@ -239,6 +254,19 @@ try {
     </footer>
 
     <script src="assets/js/main.js"></script>
+    
+    <!-- Debug Information -->
+    <script>
+        console.log("🔍 DEBUG INFO:");
+        <?php foreach($debug_info as $info): ?>
+        console.log("<?php echo addslashes($info); ?>");
+        <?php endforeach; ?>
+        
+        console.log("📊 Servicios cargados:");
+        <?php foreach($services as $service): ?>
+        console.log("- <?php echo addslashes($service['title']); ?>: $<?php echo number_format($service['price'], 0, ',', '.'); ?>");
+        <?php endforeach; ?>
+    </script>
 </body>
 </html>
 
