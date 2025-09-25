@@ -1305,3 +1305,201 @@ html {
         transform: translateY(0) scale(1);
     }
 }
+
+/* ===========================================
+   SECCIÓN PARA PRINCIPIANTES
+   =========================================== */
+
+.beginners-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.beginners-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    margin: 60px 0;
+    align-items: start;
+}
+
+.beginners-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.step-item h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.step-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.beginners-benefits {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.beginners-benefits h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.benefits-list li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.benefits-list i {
+    color: #28a745;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.benefits-list strong {
+    color: #007bff;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cta-section h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background: white;
+    color: #007bff;
+    border: 2px solid white;
+}
+
+.cta-buttons .btn-primary:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.cta-buttons .btn-whatsapp {
+    background: #25d366;
+    color: white;
+    border: 2px solid #25d366;
+}
+
+.cta-buttons .btn-whatsapp:hover {
+    background: #128c7e;
+    border-color: #128c7e;
+    color: white;
+}
+
+/* Responsive para sección de principiantes */
+@media (max-width: 768px) {
+    .beginners-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .beginners-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section {
+        padding: 30px 20px;
+    }
+    
+    .cta-section h3 {
+        font-size: 24px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

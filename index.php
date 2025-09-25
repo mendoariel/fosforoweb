@@ -28,27 +28,29 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título actualizado - v2.0 -->
-    <title>Fosforo Web - Encendemos tu presencia online</title>
+    <!-- Título optimizado para SEO - v3.0 -->
+    <title>Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web</title>
     
-    <!-- Meta Description -->
-    <meta name="description" content="Fosforo Web - Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores. Encendemos tu presencia online en Mendoza, Argentina.">
+    <!-- Meta Description optimizada -->
+    <meta name="description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes, empresas y emprendedores en Mendoza, Argentina. ¡Contáctanos!">
     
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="diseño web, marketing digital, SEO, códigos QR, desarrollo web, Mendoza, Argentina, presencia online">
+    <!-- Meta Keywords actualizadas -->
+    <meta name="keywords" content="primera pagina web, hacer pagina web, crear sitio web, desarrollo web principiantes, diseño web mendoza, pagina web barata, sitio web profesional, desarrollo web argentina, como hacer una pagina web, diseño web economico, pagina web paso a paso, crear pagina web mendoza">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fosforoweb.com.ar/">
-    <meta property="og:title" content="Fosforo Web - Encendemos tu presencia online">
-    <meta property="og:description" content="Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores.">
+    <meta property="og:title" content="Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web">
+    <meta property="og:description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes en Mendoza, Argentina.">
     <meta property="og:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Fosforo Web">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://fosforoweb.com.ar/">
-    <meta property="twitter:title" content="Fosforo Web - Encendemos tu presencia online">
-    <meta property="twitter:description" content="Soluciones digitales profesionales. Diseño web, marketing digital, SEO y códigos QR innovadores.">
+    <meta property="twitter:title" content="Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web">
+    <meta property="twitter:description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes en Mendoza, Argentina.">
     <meta property="twitter:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
     
     <!-- Favicon -->
@@ -64,6 +66,123 @@ try {
     
     <link rel="stylesheet" href="assets/css/style-modern.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Schema Markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fosforo Web",
+        "description": "Desarrollo web profesional para principiantes. Creamos tu primera página web desde cero con diseño moderno y responsive.",
+        "url": "https://fosforoweb.com.ar",
+        "telephone": "+542615597977",
+        "email": "info@fosforoweb.com.ar",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Godoy Cruz",
+            "addressLocality": "Mendoza",
+            "addressRegion": "Mendoza",
+            "addressCountry": "Argentina"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-32.9442",
+            "longitude": "-68.8383"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "priceRange": "$$",
+        "image": "https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg",
+        "logo": "https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg",
+        "sameAs": [
+            "https://fosforoweb.com.ar"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo Web",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Primera Página Web",
+                        "description": "Creamos tu primera página web profesional desde cero, ideal para principiantes y pequeñas empresas."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Diseño Web Responsive",
+                        "description": "Diseño web moderno que se adapta perfectamente a todos los dispositivos móviles y de escritorio."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Marketing Digital",
+                        "description": "Estrategias de marketing online para hacer crecer tu negocio en internet."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "SEO y Posicionamiento",
+                        "description": "Optimización para motores de búsqueda para que tu sitio web aparezca en Google."
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "50"
+        }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo crear mi primera página web?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Te ayudamos a crear tu primera página web desde cero. Nos encargamos del diseño, desarrollo y configuración. Solo necesitas tener claro qué quieres mostrar en tu sitio web."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánto cuesta hacer una página web?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los precios varían según las necesidades específicas de cada proyecto. Ofrecemos paquetes accesibles para principiantes y pequeñas empresas. Contáctanos para un presupuesto personalizado."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo toma crear un sitio web?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un sitio web básico puede estar listo en 2-4 semanas. Los tiempos dependen de la complejidad del proyecto y la cantidad de contenido que necesites."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Mi página web funcionará en móviles?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, todos nuestros sitios web son responsive y se adaptan perfectamente a móviles, tablets y computadoras de escritorio."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -81,10 +200,13 @@ try {
                         <a href="#inicio" class="nav-link active">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#servicios" class="nav-link">Servicios</a>
+                        <a href="/guia-primera-pagina-web.php" class="nav-link">Guía</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#nosotros" class="nav-link">Nosotros</a>
+                        <a href="/precios-pagina-web.php" class="nav-link">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicios" class="nav-link">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contacto" class="nav-link">Contacto</a>
@@ -104,11 +226,11 @@ try {
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="highlight">Encendemos</span> tu presencia online
+                    <span class="highlight">Tu Primera Página Web</span> Profesional
                 </h1>
                 <p class="hero-description">
-                    Creamos soluciones web profesionales que impulsan tu negocio hacia el éxito digital. 
-                    Desde el diseño hasta el marketing, te acompañamos en cada paso.
+                    ¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. 
+                    Diseño web para principiantes, empresas y emprendedores. ¡Es más fácil de lo que crees!
                 </p>
                 <div class="hero-buttons">
                     <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
@@ -122,6 +244,65 @@ try {
             <div class="hero-image">
                 <div class="hero-graphic">
                     <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección para Principiantes -->
+    <section class="beginners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Es tu primera vez creando una página web?</h2>
+                <p class="section-subtitle">No te preocupes, te acompañamos en cada paso del proceso</p>
+            </div>
+            
+            <div class="beginners-content">
+                <div class="beginners-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Consultoría Gratuita</h3>
+                        <p>Analizamos tus necesidades y te explicamos cómo funciona el proceso de creación de tu sitio web.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Diseño Personalizado</h3>
+                        <p>Creamos un diseño único para tu negocio, adaptado a tu marca y objetivos.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Desarrollo Profesional</h3>
+                        <p>Programamos tu sitio web con las mejores tecnologías y estándares actuales.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3>Capacitación Incluida</h3>
+                        <p>Te enseñamos a gestionar tu sitio web para que puedas actualizarlo tú mismo.</p>
+                    </div>
+                </div>
+                
+                <div class="beginners-benefits">
+                    <h3>¿Por qué elegirnos para tu primera página web?</h3>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Experiencia con principiantes:</strong> Sabemos cómo explicarte todo de forma sencilla</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Precios accesibles:</strong> Paquetes diseñados para pequeñas empresas y emprendedores</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Soporte completo:</strong> Te acompañamos durante todo el proceso y después</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Resultados garantizados:</strong> Tu sitio web funcionará perfectamente en todos los dispositivos</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Sin conocimientos técnicos:</strong> No necesitas saber programar, nosotros lo hacemos todo</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>¿Listo para crear tu primera página web?</h3>
+                <p>Contáctanos y te ayudamos a dar el primer paso hacia tu presencia online profesional.</p>
+                <div class="cta-buttons">
+                    <a href="/guia-primera-pagina-web.php" class="btn btn-secondary">Ver Guía Paso a Paso</a>
+                    <a href="/precios-pagina-web.php" class="btn btn-primary">Ver Precios</a>
+                    <a href="https://wa.me/542615597977?text=Hola!%20Quiero%20crear%20mi%20primera%20página%20web" 
+                       class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Consulta Gratuita
+                    </a>
                 </div>
             </div>
         </div>

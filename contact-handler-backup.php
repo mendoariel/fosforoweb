@@ -1,6 +1,9 @@
 <?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
+require_once 'webhook-simple.php';
+require_once 'telegram-notification.php';
+require_once 'whatsapp-simple.php';
 
 // Configurar headers para JSON
 header('Content-Type: application/json');
@@ -24,6 +27,7 @@ function sanitizeInput($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
 
 try {
     // Obtener y validar datos del formulario
@@ -54,8 +58,18 @@ try {
         exit;
     }
     
-    // Intentar conectar a la base de datos
-    $conn = null;
+    // Preparar datos para almacenar
+    $contactData = [
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone,
+        'message' => $message,
+        'timestamp' => date('Y-m-d H:i:s'),
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+    ];
+    
+    // Intentar conectar a la base de datos y almacenar
+    $dbSuccess = false;
     try {
         $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -67,79 +81,73 @@ try {
             email VARCHAR(100) NOT NULL,
             phone VARCHAR(20),
             message TEXT NOT NULL,
+            ip_address VARCHAR(45),
             status ENUM('new', 'read', 'replied', 'closed') DEFAULT 'new',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
         $conn->exec($createTable);
         
         // Insertar el contacto en la base de datos
-        $stmt = $conn->prepare("INSERT INTO contacts (name, email, phone, message) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$name, $email, $phone, $message]);
+        $stmt = $conn->prepare("INSERT INTO contacts (name, email, phone, message, ip_address) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$name, $email, $phone, $message, $_SERVER['REMOTE_ADDR'] ?? 'unknown']);
         
-        // Enviar email de notificación (opcional)
-        $to = 'albertdesarrolloweb@gmail.com';
-        $subject = "Nuevo mensaje de contacto - " . SITE_NAME;
-        $emailMessage = "
-        <h2>Nuevo mensaje de contacto</h2>
-        <p><strong>Nombre:</strong> {$name}</p>
-        <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Teléfono:</strong> {$phone}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>{$message}</p>
-        <hr>
-        <p><small>Enviado desde " . SITE_URL . " el " . date('Y-m-d H:i:s') . "</small></p>
-        ";
-        
-        $headers = [
-            'MIME-Version: 1.0',
-            'Content-type: text/html; charset=UTF-8',
-            'From: ' . SITE_NAME . ' <noreply@fosforoweb.com.ar>',
-            'Reply-To: ' . $email,
-            'X-Mailer: PHP/' . phpversion()
-        ];
-        
-        // Intentar enviar email (puede fallar en entorno local)
-        $emailSent = @mail($to, $subject, $emailMessage, implode("\r\n", $headers));
-        
-        // Log del contacto (para debugging)
-        error_log("Nuevo contacto: {$name} ({$email}) - " . date('Y-m-d H:i:s'));
-        
-        echo json_encode([
-            'success' => true, 
-            'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.'
-        ]);
+        $dbSuccess = true;
+        error_log("Contacto guardado en BD: {$name} ({$email})");
         
     } catch(PDOException $e) {
-        // Si falla la base de datos, al menos intentar enviar email
         error_log("Error de BD en contacto: " . $e->getMessage());
-        
-        // Intentar enviar email como respaldo
-        $to = 'albertdesarrolloweb@gmail.com';
-        $subject = "Nuevo mensaje de contacto - " . SITE_NAME;
-        $emailMessage = "
-        <h2>Nuevo mensaje de contacto (Sin BD)</h2>
-        <p><strong>Nombre:</strong> {$name}</p>
-        <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Teléfono:</strong> {$phone}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>{$message}</p>
-        <hr>
-        <p><small>Enviado desde " . SITE_URL . " el " . date('Y-m-d H:i:s') . "</small></p>
-        ";
-        
-        $headers = [
-            'MIME-Version: 1.0',
-            'Content-type: text/html; charset=UTF-8',
-            'From: ' . SITE_NAME . ' <noreply@fosforoweb.com.ar>',
-            'Reply-To: ' . $email,
-            'X-Mailer: PHP/' . phpversion()
-        ];
-        
-        $emailSent = @mail($to, $subject, $emailMessage, implode("\r\n", $headers));
-        
+    }
+    
+    
+    // Usar sistema de webhook y notificaciones
+    $webhookService = new SimpleWebhookService();
+    $webhookResult = $webhookService->processContact($name, $email, $phone, $message);
+    
+    // Intentar enviar email a la casilla principal
+    $to = 'info@fosforoweb.com.ar';
+    $subject = "Nuevo mensaje de contacto - " . SITE_NAME;
+    $emailMessage = "
+    <h2>Nuevo mensaje de contacto</h2>
+    <p><strong>Nombre:</strong> {$name}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Teléfono:</strong> {$phone}</p>
+    <p><strong>Mensaje:</strong></p>
+    <p>{$message}</p>
+    <hr>
+    <p><small>Enviado desde " . SITE_URL . " el " . date('Y-m-d H:i:s') . "</small></p>
+    ";
+    
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-type: text/html; charset=UTF-8',
+        'From: ' . SITE_NAME . ' <noreply@fosforoweb.com.ar>',
+        'Reply-To: ' . $email,
+        'X-Mailer: PHP/' . phpversion()
+    ];
+    
+    $emailSent = @mail($to, $subject, $emailMessage, implode("\r\n", $headers));
+    
+    // Intentar notificación por Telegram (opcional)
+    $telegramService = new TelegramNotificationService();
+    $telegramResult = $telegramService->sendContactNotification($name, $email, $phone, $message);
+    
+    // Intentar notificación por WhatsApp (opcional)
+    $whatsappService = new SimpleWhatsAppService('zapier');
+    $whatsappResult = $whatsappService->sendContactNotification($name, $email, $phone, $message);
+    
+    if ($webhookResult['success'] || $emailSent) {
+        $method = $emailSent ? 'Email' : $webhookResult['method'];
+        error_log("Contacto procesado exitosamente: " . $method);
         echo json_encode([
             'success' => true, 
-            'message' => 'Mensaje recibido. Te contactaremos pronto.'
+            'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.',
+            'debug' => 'Procesado con ' . $method
+        ]);
+    } else {
+        echo json_encode([
+            'success' => false, 
+            'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.',
+            'debug' => 'Error en el procesamiento'
         ]);
     }
     
@@ -147,10 +155,11 @@ try {
     error_log("Error general en contacto: " . $e->getMessage());
     echo json_encode([
         'success' => false, 
-        'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.'
+        'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.',
+        'debug' => 'Error: ' . $e->getMessage()
     ]);
 } finally {
-    if ($conn) {
+    if (isset($conn)) {
         $conn = null;
     }
 }
