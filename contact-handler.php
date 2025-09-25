@@ -1,10 +1,4 @@
 <?php
-require_once 'includes/config.php';
-require_once 'includes/functions.php';
-require_once 'webhook-simple.php';
-require_once 'telegram-notification.php';
-require_once 'whatsapp-simple.php';
-
 // Configurar headers para JSON
 header('Content-Type: application/json');
 
@@ -27,7 +21,6 @@ function sanitizeInput($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
 
 try {
     // Obtener y validar datos del formulario
@@ -58,20 +51,16 @@ try {
         exit;
     }
     
-    // Preparar datos para almacenar
-    $contactData = [
-        'name' => $name,
-        'email' => $email,
-        'phone' => $phone,
-        'message' => $message,
-        'timestamp' => date('Y-m-d H:i:s'),
-        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
-    ];
-    
-    // Intentar conectar a la base de datos y almacenar
+    // Intentar conectar a la base de datos
     $dbSuccess = false;
     try {
-        $conn = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
+        // Configuración de base de datos
+        $dbHost = 'localhost';
+        $dbUser = 'a0020600_mendo';
+        $dbPass = 'Fosforo1234';
+        $dbName = 'a0020600_fosforo';
+        
+        $conn = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         // Crear tabla de contactos si no existe
@@ -82,7 +71,6 @@ try {
             phone VARCHAR(20),
             message TEXT NOT NULL,
             ip_address VARCHAR(45),
-            status ENUM('new', 'read', 'replied', 'closed') DEFAULT 'new',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
         $conn->exec($createTable);
@@ -98,58 +86,104 @@ try {
         error_log("Error de BD en contacto: " . $e->getMessage());
     }
     
+    // Guardar en archivo como respaldo
+    $backupFile = 'contacts_' . date('Y-m') . '.txt';
+    $backupData = [
+        'timestamp' => date('Y-m-d H:i:s'),
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone ?: 'No proporcionado',
+        'message' => $message,
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+    ];
     
-    // Usar sistema de webhook y notificaciones
-    $webhookService = new SimpleWebhookService();
-    $webhookResult = $webhookService->processContact($name, $email, $phone, $message);
+    $line = implode(' | ', $backupData) . "\n";
+    file_put_contents($backupFile, $line, FILE_APPEND | LOCK_EX);
+    error_log("Contacto guardado en archivo: {$name} ({$email})");
     
-    // Intentar enviar email a la casilla principal
+    // Enviar email
     $to = 'info@fosforoweb.com.ar';
-    $subject = "Nuevo mensaje de contacto - " . SITE_NAME;
+    $subject = "Nuevo mensaje de contacto - Fosforo Web";
     $emailMessage = "
-    <h2>Nuevo mensaje de contacto</h2>
-    <p><strong>Nombre:</strong> {$name}</p>
-    <p><strong>Email:</strong> {$email}</p>
-    <p><strong>Teléfono:</strong> {$phone}</p>
-    <p><strong>Mensaje:</strong></p>
-    <p>{$message}</p>
-    <hr>
-    <p><small>Enviado desde " . SITE_URL . " el " . date('Y-m-d H:i:s') . "</small></p>
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background: #007bff; color: white; padding: 20px; text-align: center; }
+            .content { padding: 20px; background: #f8f9fa; }
+            .field { margin: 10px 0; padding: 15px; background: white; border-radius: 8px; border-left: 4px solid #007bff; }
+            .label { font-weight: bold; color: #495057; display: block; margin-bottom: 5px; }
+            .value { color: #212529; }
+            .footer { padding: 20px; text-align: center; background: #6c757d; color: white; font-size: 12px; }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h2>📧 Nuevo Mensaje de Contacto</h2>
+                <p>Fosforo Web</p>
+            </div>
+            <div class='content'>
+                <div class='field'>
+                    <span class='label'>👤 Nombre:</span>
+                    <span class='value'>{$name}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>📧 Email:</span>
+                    <span class='value'>{$email}</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>📱 Teléfono:</span>
+                    <span class='value'>" . ($phone ?: 'No proporcionado') . "</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>💬 Mensaje:</span>
+                    <div class='value' style='margin-top: 10px; padding: 15px; background: white; border-left: 4px solid #007bff;'>
+                        " . nl2br($message) . "
+                    </div>
+                </div>
+                <div class='field'>
+                    <span class='label'>📅 Fecha:</span>
+                    <span class='value'>" . date('d/m/Y H:i:s') . "</span>
+                </div>
+                <div class='field'>
+                    <span class='label'>🌐 IP:</span>
+                    <span class='value'>" . ($_SERVER['REMOTE_ADDR'] ?? 'No disponible') . "</span>
+                </div>
+            </div>
+            <div class='footer'>
+                <p>Este mensaje fue enviado desde el formulario de contacto de <strong>Fosforo Web</strong></p>
+                <p>Puedes responder directamente a este email para contactar al cliente</p>
+                <p>🔗 <a href='https://fosforoweb.com.ar' style='color: #ffffff;'>fosforoweb.com.ar</a></p>
+            </div>
+        </div>
+    </body>
+    </html>
     ";
     
     $headers = [
         'MIME-Version: 1.0',
         'Content-type: text/html; charset=UTF-8',
-        'From: ' . SITE_NAME . ' <noreply@fosforoweb.com.ar>',
-        'Reply-To: ' . $email,
+        'From: Fosforo Web <noreply@fosforoweb.com.ar>',
+        'Reply-To: ' . $name . ' <' . $email . '>',
         'X-Mailer: PHP/' . phpversion()
     ];
     
     $emailSent = @mail($to, $subject, $emailMessage, implode("\r\n", $headers));
     
-    // Intentar notificación por Telegram (opcional)
-    $telegramService = new TelegramNotificationService();
-    $telegramResult = $telegramService->sendContactNotification($name, $email, $phone, $message);
-    
-    // Intentar notificación por WhatsApp (opcional)
-    $whatsappService = new SimpleWhatsAppService('zapier');
-    $whatsappResult = $whatsappService->sendContactNotification($name, $email, $phone, $message);
-    
-    if ($webhookResult['success'] || $emailSent) {
-        $method = $emailSent ? 'Email' : $webhookResult['method'];
-        error_log("Contacto procesado exitosamente: " . $method);
-        echo json_encode([
-            'success' => true, 
-            'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.',
-            'debug' => 'Procesado con ' . $method
-        ]);
+    if ($emailSent) {
+        error_log("Email enviado exitosamente a {$to}");
     } else {
-        echo json_encode([
-            'success' => false, 
-            'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.',
-            'debug' => 'Error en el procesamiento'
-        ]);
+        error_log("Error al enviar email a {$to}");
     }
+    
+    // Respuesta exitosa
+    echo json_encode([
+        'success' => true, 
+        'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.',
+        'debug' => 'Procesado correctamente - BD: ' . ($dbSuccess ? 'OK' : 'Error') . ', Email: ' . ($emailSent ? 'OK' : 'Error')
+    ]);
     
 } catch (Exception $e) {
     error_log("Error general en contacto: " . $e->getMessage());
@@ -158,9 +192,5 @@ try {
         'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.',
         'debug' => 'Error: ' . $e->getMessage()
     ]);
-} finally {
-    if (isset($conn)) {
-        $conn = null;
-    }
 }
 ?>
