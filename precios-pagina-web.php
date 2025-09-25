@@ -81,6 +81,12 @@ require_once 'includes/functions.php';
             text-align: center;
         }
         
+        .pricing-hero .hero-description {
+            text-align: center !important;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -216,6 +222,8 @@ require_once 'includes/functions.php';
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 20px;
+            background: var(--bg-dark);
+            border-radius: 20px;
         }
         
         .faq-item {
@@ -283,7 +291,7 @@ require_once 'includes/functions.php';
     <section class="pricing-hero">
         <div class="container">
             <h1>💰 Precios Transparentes</h1>
-            <p class="hero-description">
+            <p class="hero-description" style="text-align: center;">
                 Paquetes diseñados especialmente para principiantes. Sin sorpresas, todo incluido.
             </p>
         </div>
@@ -406,7 +414,7 @@ require_once 'includes/functions.php';
 
     <!-- FAQ Section -->
     <section class="faq-section">
-        <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 40px;">❓ Preguntas sobre Precios</h2>
+        <h2 style="color: #FFFFFF !important; text-align: center; margin-bottom: 40px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">❓ Preguntas sobre Precios</h2>
         
         <div class="faq-item">
             <div class="faq-question">

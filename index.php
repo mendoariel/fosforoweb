@@ -253,46 +253,102 @@ try {
     <!-- Sección para Principiantes -->
     <section class="beginners-section">
         <div class="container">
+            <!-- Título principal mejorado -->
             <div class="section-header">
-                <h2 class="section-title">¿Es tu primera vez creando una página web?</h2>
-                <p class="section-subtitle">No te preocupes, te acompañamos en cada paso del proceso</p>
+                <h2 class="section-title">Tu Primera Página Web en 4 Pasos Simples</h2>
+                <p class="section-subtitle">Un proceso diseñado especialmente para principiantes. Sin complicaciones, sin sorpresas.</p>
             </div>
             
-            <div class="beginners-content">
-                <div class="beginners-steps">
-                    <div class="step-item">
-                        <div class="step-number">1</div>
-                        <h3>Consultoría Gratuita</h3>
-                        <p>Analizamos tus necesidades y te explicamos cómo funciona el proceso de creación de tu sitio web.</p>
+            <!-- Proceso en timeline vertical -->
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
-                    <div class="step-item">
-                        <div class="step-number">2</div>
-                        <h3>Diseño Personalizado</h3>
-                        <p>Creamos un diseño único para tu negocio, adaptado a tu marca y objetivos.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">3</div>
-                        <h3>Desarrollo Profesional</h3>
-                        <p>Programamos tu sitio web con las mejores tecnologías y estándares actuales.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">4</div>
-                        <h3>Capacitación Incluida</h3>
-                        <p>Te enseñamos a gestionar tu sitio web para que puedas actualizarlo tú mismo.</p>
+                    <div class="timeline-content">
+                        <h3>1. Consultoría Gratuita</h3>
+                        <p>Analizamos tus necesidades y te explicamos todo el proceso de forma sencilla. Sin compromisos.</p>
                     </div>
                 </div>
                 
-                <div class="beginners-benefits">
-                    <h3>¿Por qué elegirnos para tu primera página web?</h3>
-                    <ul class="benefits-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>Experiencia con principiantes:</strong> Sabemos cómo explicarte todo de forma sencilla</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Precios accesibles:</strong> Paquetes diseñados para pequeñas empresas y emprendedores</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Soporte completo:</strong> Te acompañamos durante todo el proceso y después</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Resultados garantizados:</strong> Tu sitio web funcionará perfectamente en todos los dispositivos</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Sin conocimientos técnicos:</strong> No necesitas saber programar, nosotros lo hacemos todo</li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. Diseño Personalizado</h3>
+                        <p>Creamos un diseño único para tu negocio, adaptado a tu marca y objetivos específicos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>3. Desarrollo Profesional</h3>
+                        <p>Programamos tu sitio web con las mejores tecnologías y estándares actuales del mercado.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>4. Capacitación Incluida</h3>
+                        <p>Te enseñamos a gestionar tu sitio web para que puedas actualizarlo tú mismo cuando quieras.</p>
+                    </div>
                 </div>
             </div>
+                
+            
+            <!-- Beneficios destacados -->
+            <div class="benefits-showcase">
+                <h3>¿Por qué somos la mejor opción para tu primera página web?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4 class="benefit-title">Experiencia con Principiantes</h4>
+                        <p class="benefit-description">Sabemos cómo explicarte todo de forma sencilla</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4 class="benefit-title">Precios Accesibles</h4>
+                        <p class="benefit-description">Paquetes diseñados para emprendedores</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4 class="benefit-title">Soporte Completo</h4>
+                        <p class="benefit-description">Te acompañamos durante todo el proceso</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="benefit-title">Garantía Total</h4>
+                        <p class="benefit-description">Tu sitio funcionará perfectamente</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="benefit-title">Sin Conocimientos Técnicos</h4>
+                        <p class="benefit-description">Nos encargamos de toda la parte técnica</p>
+                    </div>
+                </div>
+            </div>
+        </div>
             
             <div class="cta-section">
                 <h3>¿Listo para crear tu primera página web?</h3>
@@ -531,28 +587,28 @@ try {
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <span>Email</span>
+                                    <span>Email: </span>
                                     <a href="mailto:info@fosforoweb.com.ar">info@fosforoweb.com.ar</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <span>Teléfono</span>
+                                    <span>Teléfono: </span>
                                     <a href="tel:+542615597977">+54 261 559-7977</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <span>Ubicación</span>
+                                    <span>Ubicación: </span>
                                     <span>Godoy Cruz, Mendoza, Argentina</span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
                                 <div>
-                                    <span>Horarios</span>
+                                    <span>Horarios: </span>
                                     <span>Lun - Vie: 9:00 - 18:00</span>
                                 </div>
                             </div>

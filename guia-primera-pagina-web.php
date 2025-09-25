@@ -103,6 +103,12 @@ require_once 'includes/functions.php';
             text-align: center;
         }
         
+        .guide-hero .hero-description {
+            text-align: center !important;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
         .guide-content {
             max-width: 800px;
             margin: 0 auto;
@@ -202,7 +208,7 @@ require_once 'includes/functions.php';
     <section class="guide-hero">
         <div class="container">
             <h1>📚 Cómo Crear tu Primera Página Web</h1>
-            <p class="hero-description">
+            <p class="hero-description" style="text-align: center;">
                 Guía completa paso a paso para principiantes. Sin conocimientos técnicos necesarios.
             </p>
             <div class="hero-buttons">
@@ -223,11 +229,11 @@ require_once 'includes/functions.php';
                 <h3>¿Qué necesitas definir?</h3>
                 <div class="checklist">
                     <ul>
-                        <li><i class="fas fa-check"></i> <strong>Objetivo:</strong> ¿Para qué quieres la página? (vender, informar, contactar)</li>
-                        <li><i class="fas fa-check"></i> <strong>Audiencia:</strong> ¿Quién va a visitar tu página?</li>
-                        <li><i class="fas fa-check"></i> <strong>Contenido:</strong> ¿Qué información vas a mostrar?</li>
-                        <li><i class="fas fa-check"></i> <strong>Presupuesto:</strong> ¿Cuánto puedes invertir?</li>
-                        <li><i class="fas fa-check"></i> <strong>Tiempo:</strong> ¿Cuándo la necesitas lista?</li>
+                        <li><i class="fas fa-check"></i> <strong>Objetivo: </strong> ¿Para qué quieres la página? (vender, informar, contactar)</li>
+                        <li><i class="fas fa-check"></i> <strong>Audiencia: </strong> ¿Quién va a visitar tu página?</li>
+                        <li><i class="fas fa-check"></i> <strong>Contenido: </strong> ¿Qué información vas a mostrar?</li>
+                        <li><i class="fas fa-check"></i> <strong>Presupuesto: </strong> ¿Cuánto puedes invertir?</li>
+                        <li><i class="fas fa-check"></i> <strong>Tiempo: </strong> ¿Cuándo la necesitas lista?</li>
                     </ul>
                 </div>
                 
@@ -271,11 +277,11 @@ require_once 'includes/functions.php';
                 <h3>Elementos importantes del diseño:</h3>
                 <div class="checklist">
                     <ul>
-                        <li><i class="fas fa-check"></i> <strong>Colores:</strong> Que representen tu marca</li>
-                        <li><i class="fas fa-check"></i> <strong>Tipografía:</strong> Fácil de leer</li>
-                        <li><i class="fas fa-check"></i> <strong>Imágenes:</strong> De buena calidad</li>
-                        <li><i class="fas fa-check"></i> <strong>Navegación:</strong> Simple e intuitiva</li>
-                        <li><i class="fas fa-check"></i> <strong>Responsive:</strong> Que funcione en móviles</li>
+                        <li><i class="fas fa-check"></i> <strong>Colores: </strong> Que representen tu marca</li>
+                        <li><i class="fas fa-check"></i> <strong>Tipografía: </strong> Fácil de leer</li>
+                        <li><i class="fas fa-check"></i> <strong>Imágenes: </strong> De buena calidad</li>
+                        <li><i class="fas fa-check"></i> <strong>Navegación: </strong> Simple e intuitiva</li>
+                        <li><i class="fas fa-check"></i> <strong>Responsive: </strong> Que funcione en móviles</li>
                     </ul>
                 </div>
                 
@@ -297,9 +303,9 @@ require_once 'includes/functions.php';
                 <h3>Opciones para principiantes:</h3>
                 <div class="checklist">
                     <ul>
-                        <li><i class="fas fa-check"></i> <strong>Constructor de sitios web:</strong> Wix, Squarespace (fácil)</li>
-                        <li><i class="fas fa-check"></i> <strong>WordPress:</strong> Más flexible pero complejo</li>
-                        <li><i class="fas fa-check"></i> <strong>Contratar profesional:</strong> La opción más segura</li>
+                        <li><i class="fas fa-check"></i> <strong>Constructor de sitios web: </strong> Wix, Squarespace (fácil)</li>
+                        <li><i class="fas fa-check"></i> <strong>WordPress: </strong> Más flexible pero complejo</li>
+                        <li><i class="fas fa-check"></i> <strong>Contratar profesional: </strong> La opción más segura</li>
                     </ul>
                 </div>
                 
@@ -330,7 +336,7 @@ require_once 'includes/functions.php';
 
             <!-- FAQ Section -->
             <div class="step-card">
-                <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 30px;">❓ Preguntas Frecuentes</h2>
+                <h2 style="color: #1F2937 !important; text-align: center; margin-bottom: 30px; font-weight: 700;">❓ Preguntas Frecuentes</h2>
                 
                 <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Cuánto cuesta crear una página web?</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 15px;">Los precios varían según la complejidad. Una página básica puede costar desde $50,000 ARS, pero te incluimos todo: diseño, desarrollo, hosting y capacitación.</p>
