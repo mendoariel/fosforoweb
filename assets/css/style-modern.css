@@ -426,22 +426,99 @@ body {
     background: var(--bg-dark);
 }
 
+/* Títulos de secciones - solo para secciones con fondo oscuro */
+.services .section-title,
+.about .section-title,
+.contact .section-title,
+.qr-showcase .section-title,
+.footer .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos de secciones con fondo claro */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--highlight-color) !important; /* Blanco para máximo contraste */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más visible */
+    color: #1F2937 !important; /* OSCURO para fondo claro */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Subtítulos de secciones - solo para secciones con fondo oscuro */
+.services .section-subtitle,
+.about .section-subtitle,
+.contact .section-subtitle,
+.qr-showcase .section-subtitle,
+.footer .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtítulos de secciones con fondo claro */
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
+    color: #6B7280 !important; /* GRIS para fondo claro */
     margin-bottom: 3rem;
-    opacity: 0.95; /* Menos transparencia para mejor legibilidad */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    text-shadow: none;
+}
+
+/* ===== CORRECCIONES ESPECÍFICAS PARA CONTRASTES ===== */
+
+/* Lista de beneficios en secciones oscuras */
+.about .benefits-list li,
+.services .benefits-list li {
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    background: rgba(255, 255, 255, 0.1) !important; /* Fondo semi-transparente */
+}
+
+/* Enlaces del footer */
+.footer-links a {
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+}
+
+.footer-links a:hover {
+    color: #3B82F6 !important; /* Azul claro al hacer hover */
+}
+
+/* Texto del footer */
+.footer p,
+.footer span {
+    color: #E5E7EB !important; /* Gris muy claro para fondo oscuro */
+}
+
+/* Títulos en páginas de precios y guía */
+.pricing-hero h1,
+.guide-hero h1 {
+    color: #FFFFFF !important; /* BLANCO para fondo azul */
+}
+
+.pricing-hero p,
+.guide-hero p {
+    color: #FFFFFF !important; /* BLANCO para fondo azul */
+}
+
+/* FAQ en páginas de precios */
+.faq-section h2 {
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+}
+
+/* CTA sections */
+.cta-section h2,
+.cta-section h3,
+.cta-section p {
+    color: #FFFFFF !important; /* BLANCO para fondo azul */
 }
 
 .services-grid {
@@ -552,17 +629,17 @@ body {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-weight: 700;
 }
 
 .about-text p {
-    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
     margin-bottom: 1.5rem;
     line-height: 1.7;
-    opacity: 0.9; /* Ligeramente transparente pero legible */
+    opacity: 0.9;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -595,9 +672,27 @@ body {
 
 .stat-item span {
     font-size: 1.1rem;
-    font-weight: 700; /* Más bold */
-    color: var(--highlight-color) !important; /* Blanco para máximo contraste */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    color: var(--primary-color) !important; /* Azul para mejor contraste */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para números grandes en estadísticas */
+.stat-number {
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -1411,6 +1506,7 @@ html {
     background: #f8f9fa;
     border-radius: 10px;
     transition: all 0.3s ease;
+    color: #333333 !important; /* Texto oscuro para fondo claro */
 }
 
 .benefits-list li:hover {

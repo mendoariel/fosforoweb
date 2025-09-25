@@ -252,12 +252,17 @@ p, span, div {
 }
 
 .footer a {
-  color: var(--text-muted);
+  color: var(--bg-white) !important; /* BLANCO para fondo oscuro */
   transition: var(--transition-fast);
 }
 
 .footer a:hover {
-  color: var(--bg-white);
+  color: var(--primary-blue-light) !important; /* Azul claro al hover */
+}
+
+.footer p,
+.footer span {
+  color: #E5E7EB !important; /* Gris muy claro para fondo oscuro */
 }
 
 /* ===== WHATSAPP FLOAT ===== */
