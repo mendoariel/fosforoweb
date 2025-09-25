@@ -27,8 +27,8 @@ require_once 'includes/functions.php';
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/style-modern.css">
-    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/colors.css?v=1.1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Schema Markup para Precios -->

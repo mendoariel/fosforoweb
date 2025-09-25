@@ -29,8 +29,8 @@ require_once 'includes/functions.php';
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/style-modern.css">
-    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/colors.css?v=1.1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Schema Markup para Artículo -->
@@ -323,8 +323,8 @@ require_once 'includes/functions.php';
 
             <!-- CTA Section -->
             <div class="cta-guide">
-                <h3>¿Te parece complicado?</h3>
-                <p>No te preocupes, nosotros te ayudamos con todo el proceso. Te guiamos paso a paso y nos encargamos de la parte técnica.</p>
+                <h3 style="color: #FFFFFF !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">¿Te parece complicado?</h3>
+                <p style="color: #FFFFFF !important; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">No te preocupes, nosotros te ayudamos con todo el proceso. Te guiamos paso a paso y nos encargamos de la parte técnica.</p>
                 <div class="cta-buttons">
                     <a href="/#contacto" class="btn btn-primary">Solicitar Ayuda</a>
                     <a href="https://wa.me/542615597977?text=Hola!%20Necesito%20ayuda%20para%20crear%20mi%20primera%20página%20web" 
