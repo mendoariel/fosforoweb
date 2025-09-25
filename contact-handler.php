@@ -103,6 +103,30 @@ try {
     $webhookService = new SimpleWebhookService();
     $webhookResult = $webhookService->processContact($name, $email, $phone, $message);
     
+    // Intentar enviar email a la casilla principal
+    $to = 'info@fosforoweb.com.ar';
+    $subject = "Nuevo mensaje de contacto - " . SITE_NAME;
+    $emailMessage = "
+    <h2>Nuevo mensaje de contacto</h2>
+    <p><strong>Nombre:</strong> {$name}</p>
+    <p><strong>Email:</strong> {$email}</p>
+    <p><strong>Teléfono:</strong> {$phone}</p>
+    <p><strong>Mensaje:</strong></p>
+    <p>{$message}</p>
+    <hr>
+    <p><small>Enviado desde " . SITE_URL . " el " . date('Y-m-d H:i:s') . "</small></p>
+    ";
+    
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-type: text/html; charset=UTF-8',
+        'From: ' . SITE_NAME . ' <noreply@fosforoweb.com.ar>',
+        'Reply-To: ' . $email,
+        'X-Mailer: PHP/' . phpversion()
+    ];
+    
+    $emailSent = @mail($to, $subject, $emailMessage, implode("\r\n", $headers));
+    
     // Intentar notificación por Telegram (opcional)
     $telegramService = new TelegramNotificationService();
     $telegramResult = $telegramService->sendContactNotification($name, $email, $phone, $message);
@@ -111,12 +135,13 @@ try {
     $whatsappService = new SimpleWhatsAppService('zapier');
     $whatsappResult = $whatsappService->sendContactNotification($name, $email, $phone, $message);
     
-    if ($webhookResult['success']) {
-        error_log("Contacto procesado exitosamente: " . $webhookResult['method']);
+    if ($webhookResult['success'] || $emailSent) {
+        $method = $emailSent ? 'Email' : $webhookResult['method'];
+        error_log("Contacto procesado exitosamente: " . $method);
         echo json_encode([
             'success' => true, 
             'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.',
-            'debug' => 'Procesado con ' . $webhookResult['method']
+            'debug' => 'Procesado con ' . $method
         ]);
     } else {
         echo json_encode([
