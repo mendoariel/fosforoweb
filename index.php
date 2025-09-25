@@ -113,6 +113,10 @@ try {
                 <div class="hero-buttons">
                     <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
                     <a href="#contacto" class="btn btn-secondary">Contactanos</a>
+                    <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
+                       class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -259,6 +263,17 @@ try {
                             <p>Godoy Cruz, Mendoza, Argentina</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+54 261 559-7977</p>
+                            <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
+                               class="whatsapp-btn" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <form class="contact-form" action="contact-handler.php" method="POST">
@@ -379,6 +394,18 @@ try {
     </footer>
 
     <script src="assets/js/main.js"></script>
+    
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
+           class="whatsapp-float-btn" target="_blank" rel="noopener" title="Chatear por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">
+            <span>¡Chateá con nosotros!</span>
+            <div class="whatsapp-tooltip-arrow"></div>
+        </div>
+    </div>
     
            <!-- Debug Information (removed for production) -->
 </body>
