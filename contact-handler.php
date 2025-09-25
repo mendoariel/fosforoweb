@@ -1,7 +1,9 @@
 <?php
 require_once 'includes/config.php';
 require_once 'includes/functions.php';
-require_once 'email-service.php';
+require_once 'webhook-simple.php';
+require_once 'telegram-notification.php';
+require_once 'whatsapp-simple.php';
 
 // Configurar headers para JSON
 header('Content-Type: application/json');
@@ -97,22 +99,30 @@ try {
     }
     
     
-    // Usar el servicio de email mejorado
-    $emailService = new EmailService('albertdesarrolloweb@gmail.com');
-    $emailResult = $emailService->sendContactEmail($name, $email, $phone, $message);
+    // Usar sistema de webhook y notificaciones
+    $webhookService = new SimpleWebhookService();
+    $webhookResult = $webhookService->processContact($name, $email, $phone, $message);
     
-    if ($emailResult['success']) {
-        error_log("Contacto procesado exitosamente usando: " . $emailResult['method']);
+    // Intentar notificación por Telegram (opcional)
+    $telegramService = new TelegramNotificationService();
+    $telegramResult = $telegramService->sendContactNotification($name, $email, $phone, $message);
+    
+    // Intentar notificación por WhatsApp (opcional)
+    $whatsappService = new SimpleWhatsAppService('zapier');
+    $whatsappResult = $whatsappService->sendContactNotification($name, $email, $phone, $message);
+    
+    if ($webhookResult['success']) {
+        error_log("Contacto procesado exitosamente: " . $webhookResult['method']);
         echo json_encode([
             'success' => true, 
             'message' => 'Mensaje enviado correctamente. Te contactaremos pronto.',
-            'debug' => 'Procesado con ' . $emailResult['method']
+            'debug' => 'Procesado con ' . $webhookResult['method']
         ]);
     } else {
         echo json_encode([
             'success' => false, 
             'message' => 'Hubo un error al procesar tu mensaje. Inténtalo de nuevo.',
-            'debug' => 'Error en el servicio de email'
+            'debug' => 'Error en el procesamiento'
         ]);
     }
     
