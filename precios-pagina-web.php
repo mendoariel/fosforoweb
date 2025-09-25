@@ -27,8 +27,8 @@ require_once 'includes/functions.php';
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.1">
-    <link rel="stylesheet" href="assets/css/colors.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.2">
+    <link rel="stylesheet" href="assets/css/colors.css?v=1.2">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <!-- Schema Markup para Precios -->
@@ -314,6 +314,7 @@ require_once 'includes/functions.php';
                     <li><i class="fas fa-check"></i> Optimización SEO básica</li>
                     <li><i class="fas fa-check"></i> 1 año de hosting incluido</li>
                     <li><i class="fas fa-check"></i> Dominio .com.ar incluido</li>
+                    <li><i class="fas fa-check"></i> 1 casilla de correo profesional</li>
                     <li><i class="fas fa-check"></i> Capacitación básica</li>
                     <li><i class="fas fa-check"></i> Soporte por 3 meses</li>
                 </ul>
@@ -335,10 +336,11 @@ require_once 'includes/functions.php';
                     <li><i class="fas fa-check"></i> Diseño personalizado</li>
                     <li><i class="fas fa-check"></i> Integración con redes sociales</li>
                     <li><i class="fas fa-check"></i> Google Analytics incluido</li>
-                    <li><i class="fas fa-check"></i> Google My Business setup</li>
+                    <li><i class="fas fa-check"></i> Configuración Google My Business</li>
                     <li><i class="fas fa-check"></i> Optimización SEO avanzada</li>
                     <li><i class="fas fa-check"></i> 1 año de hosting incluido</li>
                     <li><i class="fas fa-check"></i> Dominio .com.ar incluido</li>
+                    <li><i class="fas fa-check"></i> 1 casilla de correo profesional</li>
                     <li><i class="fas fa-check"></i> Capacitación completa</li>
                     <li><i class="fas fa-check"></i> Soporte por 6 meses</li>
                 </ul>
@@ -360,11 +362,11 @@ require_once 'includes/functions.php';
                     <li><i class="fas fa-check"></i> Diseño premium personalizado</li>
                     <li><i class="fas fa-check"></i> Tienda online básica</li>
                     <li><i class="fas fa-check"></i> Integración con WhatsApp</li>
-                    <li><i class="fas fa-check"></i> Sistema de citas online</li>
                     <li><i class="fas fa-check"></i> Blog integrado</li>
                     <li><i class="fas fa-check"></i> SEO avanzado + Google Ads</li>
                     <li><i class="fas fa-check"></i> 1 año de hosting incluido</li>
                     <li><i class="fas fa-check"></i> Dominio .com.ar incluido</li>
+                    <li><i class="fas fa-check"></i> 1 casilla de correo profesional</li>
                     <li><i class="fas fa-check"></i> Capacitación premium</li>
                     <li><i class="fas fa-check"></i> Soporte por 12 meses</li>
                 </ul>
@@ -381,7 +383,7 @@ require_once 'includes/functions.php';
         <div class="container">
             <div class="transparency-content">
                 <h2>🔍 Transparencia Total</h2>
-                <p>No hay costos ocultos ni sorpresas. Te explicamos exactamente qué incluye cada paquete.</p>
+                <p>No hay costos ocultos ni sorpresas. Todos los paquetes incluyen dominio .ar, casilla de correo profesional y hosting por 1 año.</p>
                 
                 <div class="transparency-grid">
                     <div class="transparency-item">
