@@ -15,8 +15,8 @@
   
   /* ===== COLORES NEUTROS ===== */
   --text-primary: #1F2937;           /* Texto principal - Gris oscuro */
-  --text-secondary: #6B7280;         /* Texto secundario - Gris medio */
-  --text-muted: #9CA3AF;             /* Texto atenuado - Gris claro */
+  --text-secondary: #374151;         /* Texto secundario - Gris más oscuro para mejor contraste */
+  --text-muted: #6B7280;             /* Texto atenuado - Gris medio */
   --bg-light: #F3F4F6;               /* Fondo suave - Gris muy claro */
   --bg-white: #FFFFFF;               /* Fondo principal - Blanco */
   --bg-dark: #1F2937;                /* Fondo oscuro - Gris oscuro */
@@ -152,6 +152,7 @@
 /* ===== TEXTOS ===== */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
+  font-weight: 600;
 }
 
 p, span, div {
@@ -160,6 +161,32 @@ p, span, div {
 
 .text-muted {
   color: var(--text-muted);
+}
+
+/* ===== MEJORAS DE CONTRASTE ===== */
+.faq-section h2,
+.section-title {
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+.faq-question {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.faq-answer {
+  color: var(--text-secondary) !important;
+  line-height: 1.6;
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --primary-blue: #003d82;
+  }
 }
 
 /* ===== FONDOS ===== */

@@ -49,7 +49,8 @@ img {
     --bg-light: #F3F4F6; /* Gris claro suave */
     --card-bg: #ffffff; /* Blanco puro */
     --text-dark: #1F2937; /* Texto principal */
-    --text-secondary: #6B7280; /* Texto secundario */
+    --text-secondary: #4B5563; /* Texto secundario más oscuro para mejor contraste */
+    --text-muted: #6B7280; /* Texto atenuado */
     
     /* Colores de texto */
     --text-color: #ffffff; /* Blanco para texto principal */
@@ -223,12 +224,13 @@ body {
 .hero-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     gap: 4rem;
+    text-align: center;
 }
 
 .hero::before {
@@ -252,7 +254,8 @@ body {
     z-index: 2;
     flex: 1;
     max-width: 600px;
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -287,6 +290,8 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -426,15 +431,17 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--primary-color);
-    text-shadow: 0 0 20px var(--glow-color);
+    color: var(--highlight-color) !important; /* Blanco para máximo contraste */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más visible */
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--text-light);
+    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
     margin-bottom: 3rem;
+    opacity: 0.95; /* Menos transparencia para mejor legibilidad */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .services-grid {
@@ -545,15 +552,18 @@ body {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
     margin-bottom: 1rem;
-    text-shadow: 0 0 15px var(--glow-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
 }
 
 .about-text p {
-    color: var(--text-light);
+    color: var(--highlight-color) !important; /* Blanco para mejor contraste */
     margin-bottom: 1.5rem;
     line-height: 1.7;
+    opacity: 0.9; /* Ligeramente transparente pero legible */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .about-stats {
@@ -585,8 +595,9 @@ body {
 
 .stat-item span {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--highlight-color);
+    font-weight: 700; /* Más bold */
+    color: var(--highlight-color) !important; /* Blanco para máximo contraste */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Section */
@@ -1381,9 +1392,10 @@ html {
 }
 
 .beginners-benefits h3 {
-    color: #333;
+    color: var(--text-dark) !important; /* Texto más oscuro para mejor contraste */
     margin-bottom: 25px;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .benefits-list {

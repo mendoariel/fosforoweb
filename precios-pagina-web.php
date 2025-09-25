@@ -227,19 +227,26 @@ require_once 'includes/functions.php';
         }
         
         .faq-question {
-            background: #f8f9fa;
+            background: var(--bg-white);
             padding: 20px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .faq-question:hover {
+            background: var(--bg-light);
         }
         
         .faq-answer {
             padding: 20px;
-            color: #666;
+            color: var(--text-secondary);
             line-height: 1.6;
+            background: var(--bg-white);
         }
     </style>
 </head>
@@ -399,7 +406,7 @@ require_once 'includes/functions.php';
 
     <!-- FAQ Section -->
     <section class="faq-section">
-        <h2>❓ Preguntas sobre Precios</h2>
+        <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 40px;">❓ Preguntas sobre Precios</h2>
         
         <div class="faq-item">
             <div class="faq-question">

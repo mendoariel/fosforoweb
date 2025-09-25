@@ -330,22 +330,22 @@ require_once 'includes/functions.php';
 
             <!-- FAQ Section -->
             <div class="step-card">
-                <h2>❓ Preguntas Frecuentes</h2>
+                <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 30px;">❓ Preguntas Frecuentes</h2>
                 
-                <h3>¿Cuánto cuesta crear una página web?</h3>
-                <p>Los precios varían según la complejidad. Una página básica puede costar desde $50,000 ARS, pero te incluimos todo: diseño, desarrollo, hosting y capacitación.</p>
+                <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Cuánto cuesta crear una página web?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">Los precios varían según la complejidad. Una página básica puede costar desde $50,000 ARS, pero te incluimos todo: diseño, desarrollo, hosting y capacitación.</p>
                 
-                <h3>¿Cuánto tiempo toma?</h3>
-                <p>Una página web básica puede estar lista en 2-4 semanas. Los tiempos dependen de la cantidad de contenido y cambios que necesites.</p>
+                <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Cuánto tiempo toma?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">Una página web básica puede estar lista en 2-4 semanas. Los tiempos dependen de la cantidad de contenido y cambios que necesites.</p>
                 
-                <h3>¿Necesito saber programar?</h3>
-                <p>¡No! Nosotros nos encargamos de toda la parte técnica. Solo necesitas tener claro qué quieres mostrar en tu página.</p>
+                <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Necesito saber programar?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">¡No! Nosotros nos encargamos de toda la parte técnica. Solo necesitas tener claro qué quieres mostrar en tu página.</p>
                 
-                <h3>¿Puedo cambiar el diseño después?</h3>
-                <p>Sí, puedes hacer cambios menores tú mismo o nosotros te ayudamos con cambios más grandes.</p>
+                <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Puedo cambiar el diseño después?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">Sí, puedes hacer cambios menores tú mismo o nosotros te ayudamos con cambios más grandes.</p>
                 
-                <h3>¿Funcionará en móviles?</h3>
-                <p>¡Por supuesto! Todas nuestras páginas son responsive y se ven perfectas en cualquier dispositivo.</p>
+                <h3 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">¿Funcionará en móviles?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">¡Por supuesto! Todas nuestras páginas son responsive y se ven perfectas en cualquier dispositivo.</p>
             </div>
         </div>
     </section>
