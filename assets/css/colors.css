@@ -1,0 +1,325 @@
+/* ========================================
+   🎨 PALETA DE COLORES FOSFORO WEB
+   ======================================== */
+
+:root {
+  /* ===== COLORES PRIMARIOS ===== */
+  --primary-blue: #2563EB;           /* Azul principal - Confianza, tecnología */
+  --primary-blue-dark: #1D4ED8;      /* Azul oscuro - Profundidad, seriedad */
+  --primary-blue-light: #3B82F6;     /* Azul claro - Accesibilidad, modernidad */
+  
+  /* ===== COLORES SECUNDARIOS ===== */
+  --secondary-green: #10B981;        /* Verde éxito - Crecimiento, éxito */
+  --secondary-green-dark: #059669;   /* Verde oscuro - Estabilidad, confianza */
+  --accent-orange: #F59E0B;          /* Naranja accent - Energía, creatividad */
+  
+  /* ===== COLORES NEUTROS ===== */
+  --text-primary: #1F2937;           /* Texto principal - Gris oscuro */
+  --text-secondary: #6B7280;         /* Texto secundario - Gris medio */
+  --text-muted: #9CA3AF;             /* Texto atenuado - Gris claro */
+  --bg-light: #F3F4F6;               /* Fondo suave - Gris muy claro */
+  --bg-white: #FFFFFF;               /* Fondo principal - Blanco */
+  --bg-dark: #1F2937;                /* Fondo oscuro - Gris oscuro */
+  --border-light: #E5E7EB;           /* Borde claro - Gris muy claro */
+  --border-medium: #D1D5DB;          /* Borde medio - Gris claro */
+  
+  /* ===== COLORES DE ESTADO ===== */
+  --success: #10B981;                /* Éxito - Verde */
+  --error: #EF4444;                  /* Error - Rojo */
+  --warning: #F59E0B;                /* Advertencia - Naranja */
+  --info: #3B82F6;                   /* Info - Azul */
+  
+  /* ===== COLORES ESPECIALES ===== */
+  --whatsapp: #25D366;               /* WhatsApp oficial */
+  --whatsapp-hover: #128C7E;         /* WhatsApp hover */
+  
+  /* ===== GRADIENTES ===== */
+  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  --gradient-success: linear-gradient(135deg, var(--secondary-green) 0%, var(--secondary-green-dark) 100%);
+  --gradient-card: linear-gradient(145deg, var(--bg-white) 0%, #F8FAFC 100%);
+  
+  /* ===== SOMBRAS ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* ===== TRANSICIONES ===== */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* ========================================
+   🎯 APLICACIÓN DE COLORES
+   ======================================== */
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+.header {
+  background: var(--bg-dark) !important;
+}
+
+.navbar {
+  background: var(--bg-dark) !important;
+}
+
+.nav-link {
+  color: var(--bg-white) !important;
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-blue-light) !important;
+}
+
+.nav-logo-text {
+  color: var(--bg-white) !important;
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero-section,
+.guide-hero,
+.pricing-hero {
+  background: var(--gradient-primary) !important;
+  color: var(--bg-white);
+}
+
+.hero-title,
+.hero-description {
+  color: var(--bg-white);
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+  background: var(--primary-blue) !important;
+  border-color: var(--primary-blue) !important;
+  color: var(--bg-white) !important;
+  transition: var(--transition-normal);
+}
+
+.btn-primary:hover {
+  background: var(--primary-blue-dark) !important;
+  border-color: var(--primary-blue-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--bg-white) !important;
+  border: 2px solid var(--primary-blue) !important;
+  color: var(--primary-blue) !important;
+  transition: var(--transition-normal);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-blue) !important;
+  color: var(--bg-white) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp) !important;
+  color: var(--bg-white) !important;
+  transition: var(--transition-normal);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== CARDS Y TARJETAS ===== */
+.step-card,
+.pricing-card,
+.transparency-item,
+.faq-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.step-card:hover,
+.pricing-card:hover,
+.transparency-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ===== TEXTOS ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p, span, div {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* ===== FONDOS ===== */
+.bg-light {
+  background: var(--bg-light) !important;
+}
+
+.bg-white {
+  background: var(--bg-white) !important;
+}
+
+.bg-dark {
+  background: var(--bg-dark) !important;
+  color: var(--bg-white);
+}
+
+/* ===== SECCIONES ESPECIALES ===== */
+.transparency-section {
+  background: var(--bg-light) !important;
+}
+
+.cta-section {
+  background: var(--gradient-primary) !important;
+  color: var(--bg-white);
+}
+
+/* ===== ELEMENTOS DE DESTACADO ===== */
+.step-number {
+  background: var(--primary-blue) !important;
+  color: var(--bg-white);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary-blue) !important;
+}
+
+.pricing-card.featured::before {
+  background: var(--primary-blue) !important;
+}
+
+.price {
+  color: var(--primary-blue) !important;
+}
+
+/* ===== ICONOS ===== */
+.fa-check,
+.fa-check-circle {
+  color: var(--success) !important;
+}
+
+.fa-star {
+  color: var(--accent-orange) !important;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--bg-dark) !important;
+  color: var(--text-muted);
+}
+
+.footer h4 {
+  color: var(--bg-white);
+}
+
+.footer a {
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.footer a:hover {
+  color: var(--bg-white);
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float-btn {
+  background: var(--whatsapp) !important;
+  color: var(--bg-white);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.whatsapp-float-btn:hover {
+  background: var(--whatsapp-hover) !important;
+  transform: scale(1.1);
+}
+
+/* ===== FORMULARIOS ===== */
+.form-control,
+.form-input {
+  border: 1px solid var(--border-medium);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus,
+.form-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .pricing-card.featured {
+    transform: none !important;
+  }
+  
+  .pricing-card:hover,
+  .step-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ===== UTILIDADES ===== */
+.text-primary { color: var(--primary-blue) !important; }
+.text-success { color: var(--success) !important; }
+.text-warning { color: var(--warning) !important; }
+.text-error { color: var(--error) !important; }
+
+.bg-primary { background: var(--primary-blue) !important; }
+.bg-success { background: var(--success) !important; }
+.bg-warning { background: var(--warning) !important; }
+
+.border-primary { border-color: var(--primary-blue) !important; }
+.border-success { border-color: var(--success) !important; }
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== ESTADOS DE HOVER ===== */
+.hover-lift {
+  transition: var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== MODO OSCURO (FUTURO) ===== */
+@media (prefers-color-scheme: dark) {
+  /* Variables para modo oscuro se pueden agregar aquí */
+}

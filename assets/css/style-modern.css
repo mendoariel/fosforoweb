@@ -33,19 +33,23 @@ img {
     height: auto;
 }
 
-/* Paleta de colores inspirada en el favicon */
+/* Paleta de colores moderna y profesional */
 :root {
-    /* Colores principales */
-    --primary-color: #00d4ff; /* Azul eléctrico */
-    --secondary-color: #006699; /* Azul profundo */
-    --accent-color: #0099cc; /* Azul medio */
+    /* Colores principales - Nueva paleta Fosforo Web */
+    --primary-color: #2563EB; /* Azul principal */
+    --secondary-color: #1D4ED8; /* Azul oscuro */
+    --accent-color: #3B82F6; /* Azul claro */
+    --success-color: #10B981; /* Verde éxito */
+    --warning-color: #F59E0B; /* Naranja accent */
     --highlight-color: #ffffff; /* Blanco brillante */
     
     /* Colores de fondo */
-    --bg-dark: #0a0a0a; /* Negro profundo */
-    --bg-darker: #1a1a2e; /* Gris muy oscuro */
-    --bg-light: #f8f9fa; /* Blanco suave */
+    --bg-dark: #1F2937; /* Gris oscuro moderno */
+    --bg-darker: #111827; /* Gris más oscuro */
+    --bg-light: #F3F4F6; /* Gris claro suave */
     --card-bg: #ffffff; /* Blanco puro */
+    --text-dark: #1F2937; /* Texto principal */
+    --text-secondary: #6B7280; /* Texto secundario */
     
     /* Colores de texto */
     --text-color: #ffffff; /* Blanco para texto principal */
@@ -1120,7 +1124,7 @@ html {
 
 /* Botón de WhatsApp en la sección hero */
 .btn-whatsapp {
-    background: #25d366 !important;
+    background: #25D366 !important;
     color: white !important;
     border: none;
     display: inline-flex;
