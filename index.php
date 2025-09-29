@@ -201,6 +201,9 @@ try {
                         <a href="#inicio" class="nav-link active">Inicio</a>
                     </li>
                     <li class="nav-item">
+                        <a href="/pagina-web-72-horas.php" class="nav-link" style="color: #ff6b35; font-weight: bold;">72 Horas</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/guia-primera-pagina-web.php" class="nav-link">Guía</a>
                     </li>
                     <li class="nav-item">
@@ -226,16 +229,22 @@ try {
     <section id="inicio" class="hero">
         <div class="hero-container">
             <div class="hero-content">
+                <div style="background: linear-gradient(135deg, #ff6b35, #f7931e); color: white; padding: 10px 20px; border-radius: 25px; display: inline-block; margin-bottom: 20px; font-weight: bold; animation: pulse 2s infinite;">
+                    🔥 NUEVO: PÁGINA WEB EN 72 HORAS 🔥
+                </div>
                 <h1 class="hero-title">
                     <span class="highlight">Tu Primera Página Web</span> Profesional
                 </h1>
                 <p class="hero-description">
                     ¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. 
+                    <strong>¿Necesitas resultados YA? Tenemos servicio express de 72 horas.</strong>
                     Diseño web para principiantes, empresas y emprendedores. ¡Es más fácil de lo que crees!
                 </p>
                 <div class="hero-buttons">
-                    <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                    <a href="#contacto" class="btn btn-secondary">Contactanos</a>
+                    <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: #ff6b35; border-color: #ff6b35;">
+                        <i class="fas fa-rocket"></i> 72 Horas Express
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
                     <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
                        class="btn btn-whatsapp" target="_blank" rel="noopener">
                         <i class="fab fa-whatsapp"></i> WhatsApp
@@ -361,6 +370,86 @@ try {
                         <i class="fab fa-whatsapp"></i> Consulta Gratuita
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicio 72 Horas Section -->
+    <section class="express-service-section" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 80px 0; position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 class="section-title" style="color: white; font-size: 3rem; margin-bottom: 20px;">
+                    🚀 ¿Necesitas tu página web YA?
+                </h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9); font-size: 1.3rem;">
+                    Servicio express: Tu página web profesional lista en solo 72 horas
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0;">
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <img src="assets/images/flayers-01.png" alt="Flyer 72 Horas" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">72 Horas Garantizadas</h3>
+                    <p>Entregamos tu sitio web en máximo 72 horas o te devolvemos el 50% del dinero.</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <img src="assets/images/flayers-02.png" alt="Proceso Express" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Proceso Express</h3>
+                    <p>Consulta de 15 min, diseño aprobado en 6 horas, desarrollo en 24 horas, ¡listo!</p>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                    <img src="assets/images/flayers-03.png" alt="Calidad Garantizada" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Calidad Garantizada</h3>
+                    <p>Diseño responsive, optimizado para SEO, y funcionando perfectamente en todos los dispositivos.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: white; color: #ff6b35; padding: 20px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; text-decoration: none; display: inline-block; margin: 10px;">
+                    <i class="fas fa-rocket"></i> ¡QUIERO MI PÁGINA EN 72H!
+                </a>
+                <a href="https://wa.me/542615597977?text=Hola!%20Necesito%20mi%20página%20web%20en%2072%20horas%20URGENTE" 
+                   class="btn btn-whatsapp" target="_blank" rel="noopener" style="background: #25d366; color: white; padding: 20px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; text-decoration: none; display: inline-block; margin: 10px;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Express
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flyers Gallery Section -->
+    <section class="flyers-gallery" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Servicio Express en Imágenes</h2>
+                <p class="section-subtitle">Descubre cómo funciona nuestro servicio de 72 horas</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 50px 0;">
+                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="assets/images/flayers-01.png" alt="Flyer 72 Horas" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 15px;">72 Horas Garantizadas</h3>
+                    <p>Tu página web lista en máximo 72 horas o te devolvemos el 50% del dinero.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="assets/images/flayers-02.png" alt="Proceso Express" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 15px;">Proceso Optimizado</h3>
+                    <p>Consulta express, diseño aprobado, desarrollo acelerado. Todo en tiempo récord.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
+                    <img src="assets/images/flayers-03.png" alt="Calidad Garantizada" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 15px;">Calidad Premium</h3>
+                    <p>Diseño responsive, SEO optimizado, y funcionando perfectamente en todos los dispositivos.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: #ff6b35; border-color: #ff6b35; padding: 20px 40px; font-size: 1.2rem;">
+                    <i class="fas fa-rocket"></i> Ver Servicio Completo
+                </a>
             </div>
         </div>
     </section>

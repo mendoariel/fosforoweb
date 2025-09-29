@@ -300,6 +300,31 @@ require_once 'includes/functions.php';
     <!-- Pricing Grid -->
     <section class="container">
         <div class="pricing-grid">
+            <!-- Paquete Express 72 Horas -->
+            <div class="pricing-card featured" style="border: 3px solid #ff6b35; transform: scale(1.05);">
+                <div class="package-name" style="color: #ff6b35;">⚡ EXPRESS 72H</div>
+                <div class="package-description">¿Necesitas tu página web YA? ¡Lista en 72 horas!</div>
+                <div class="price" style="color: #ff6b35;">$80.000</div>
+                <div class="price-currency">Pesos argentinos</div>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Hasta 5 páginas</li>
+                    <li><i class="fas fa-check"></i> Diseño responsive</li>
+                    <li><i class="fas fa-check"></i> Formulario de contacto</li>
+                    <li><i class="fas fa-check"></i> Optimización SEO básica</li>
+                    <li><i class="fas fa-check"></i> 1 año de hosting incluido</li>
+                    <li><i class="fas fa-check"></i> Dominio .com.ar incluido</li>
+                    <li><i class="fas fa-check"></i> 1 casilla de correo profesional</li>
+                    <li><i class="fas fa-check"></i> Capacitación express (30 min)</li>
+                    <li><i class="fas fa-check"></i> Soporte por 3 meses</li>
+                    <li><i class="fas fa-check" style="color: #ff6b35; font-weight: bold;"></i> <strong>ENTREGA EN 72 HORAS GARANTIZADA</strong></li>
+                </ul>
+                
+                <div class="pricing-cta">
+                    <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: #ff6b35; border-color: #ff6b35;">¡QUIERO YA!</a>
+                </div>
+            </div>
+
             <!-- Paquete Básico -->
             <div class="pricing-card">
                 <div class="package-name">🚀 Básico</div>
