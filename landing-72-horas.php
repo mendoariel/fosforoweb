@@ -661,13 +661,13 @@ require_once 'includes/functions.php';
     <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Inversión Express</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Todo incluido, sin sorpresas</p>
+            <h2 class="section-title" style="color: white;">Consulta Personalizada</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Presupuesto transparente según tus necesidades</p>
             
             <div class="pricing-card">
                 <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: #ff6b35;">PÁGINA WEB EXPRESS</h3>
-                <div class="price-display">$80.000</div>
-                <p style="font-size: 1.3rem; margin-bottom: 40px; color: #666;">Pesos argentinos - Todo incluido</p>
+                <div style="font-size: 3rem; color: #ff6b35; font-weight: bold; margin: 30px 0;">Consulta personalizada</div>
+                <p style="font-size: 1.3rem; margin-bottom: 40px; color: #666;">Presupuesto según tus necesidades específicas</p>
                 
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> Hasta 5 páginas profesionales</li>

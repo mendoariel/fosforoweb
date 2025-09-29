@@ -501,10 +501,7 @@ try {
                     </div>
                     <h3 class="service-title"><?php echo htmlspecialchars($service['title']); ?></h3>
                     <p class="service-description"><?php echo htmlspecialchars($service['description']); ?></p>
-                    <!-- Precios ocultos temporalmente -->
-                    <!-- <div class="service-price">
-                        <span class="price">$<?php echo number_format($service['price'], 0, ',', '.'); ?></span>
-                    </div> -->
+                    <!-- Precios ocultos - consultar por WhatsApp -->
                     <a href="#contacto" class="service-btn">Consultar</a>
                 </div>
                 <?php endforeach; ?>

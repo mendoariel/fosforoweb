@@ -541,8 +541,8 @@ require_once 'includes/functions.php';
             <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.5rem;">Inversión Express</h2>
             <div class="pricing-card-express">
                 <h3 style="font-size: 2rem; margin-bottom: 20px;">PÁGINA WEB EXPRESS</h3>
-                <div class="price-express">$80.000</div>
-                <p style="font-size: 1.2rem; margin-bottom: 30px;">Pesos argentinos - Todo incluido</p>
+                <div style="font-size: 2rem; color: #ff6b35; font-weight: bold; margin: 20px 0;">Consulta personalizada</div>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; color: #666;">Presupuesto según tus necesidades específicas</p>
                 
                 <div style="text-align: left; margin: 30px 0;">
                     <h4 style="color: #ff6b35; margin-bottom: 20px;">✅ Incluye:</h4>

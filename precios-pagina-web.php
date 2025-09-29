@@ -7,10 +7,10 @@ require_once 'includes/functions.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precios Página Web - Paquetes Transparentes para Principiantes | Fosforo Web</title>
+    <title>Servicios Página Web - Consulta Personalizada | Fosforo Web</title>
     
     <!-- Meta Description -->
-    <meta name="description" content="Precios transparentes para tu primera página web. Paquetes diseñados para principiantes y pequeñas empresas. Sin sorpresas, todo incluido. ¡Consulta nuestros precios!">
+    <meta name="description" content="Servicios de desarrollo web personalizados. Consulta gratuita para tu primera página web. Diseño profesional, responsive y optimizado para principiantes.">
     
     <!-- Meta Keywords -->
     <meta name="keywords" content="precio página web, cuánto cuesta sitio web, página web barata, precio desarrollo web, paquetes página web, diseño web económico, presupuesto página web">
@@ -290,22 +290,21 @@ require_once 'includes/functions.php';
     <!-- Hero Section -->
     <section class="pricing-hero">
         <div class="container">
-            <h1>💰 Precios Transparentes</h1>
+            <h1>💬 Consulta Personalizada</h1>
             <p class="hero-description" style="text-align: center;">
-                Paquetes diseñados especialmente para principiantes. Sin sorpresas, todo incluido.
+                Cada proyecto es único. Te damos un presupuesto personalizado según tus necesidades específicas.
             </p>
         </div>
     </section>
 
-    <!-- Pricing Grid -->
+    <!-- Servicios Section -->
     <section class="container">
         <div class="pricing-grid">
-            <!-- Paquete Express 72 Horas -->
+            <!-- Servicio Express 72 Horas -->
             <div class="pricing-card featured" style="border: 3px solid #ff6b35; transform: scale(1.05);">
                 <div class="package-name" style="color: #ff6b35;">⚡ EXPRESS 72H</div>
                 <div class="package-description">¿Necesitas tu página web YA? ¡Lista en 72 horas!</div>
-                <div class="price" style="color: #ff6b35;">$80.000</div>
-                <div class="price-currency">Pesos argentinos</div>
+                <div style="font-size: 1.5rem; color: #ff6b35; font-weight: bold; margin: 20px 0;">Consulta personalizada</div>
                 
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> Hasta 5 páginas</li>
@@ -325,12 +324,11 @@ require_once 'includes/functions.php';
                 </div>
             </div>
 
-            <!-- Paquete Básico -->
+            <!-- Servicio Básico -->
             <div class="pricing-card">
                 <div class="package-name">🚀 Básico</div>
                 <div class="package-description">Perfecto para tu primera página web</div>
-                <div class="price">$50.000</div>
-                <div class="price-currency">Pesos argentinos</div>
+                <div style="font-size: 1.5rem; color: #007bff; font-weight: bold; margin: 20px 0;">Consulta personalizada</div>
                 
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> Hasta 5 páginas</li>
@@ -345,16 +343,15 @@ require_once 'includes/functions.php';
                 </ul>
                 
                 <div class="pricing-cta">
-                    <a href="/#contacto" class="btn btn-primary">Solicitar</a>
+                    <a href="/#contacto" class="btn btn-primary">Consultar</a>
                 </div>
             </div>
 
-            <!-- Paquete Profesional -->
-            <div class="pricing-card featured">
+            <!-- Servicio Profesional -->
+            <div class="pricing-card">
                 <div class="package-name">⭐ Profesional</div>
                 <div class="package-description">Ideal para empresas en crecimiento</div>
-                <div class="price">$80.000</div>
-                <div class="price-currency">Pesos argentinos</div>
+                <div style="font-size: 1.5rem; color: #007bff; font-weight: bold; margin: 20px 0;">Consulta personalizada</div>
                 
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> Hasta 10 páginas</li>
@@ -371,16 +368,15 @@ require_once 'includes/functions.php';
                 </ul>
                 
                 <div class="pricing-cta">
-                    <a href="/#contacto" class="btn btn-primary">Solicitar</a>
+                    <a href="/#contacto" class="btn btn-primary">Consultar</a>
                 </div>
             </div>
 
-            <!-- Paquete Premium -->
+            <!-- Servicio Premium -->
             <div class="pricing-card">
                 <div class="package-name">👑 Premium</div>
                 <div class="package-description">Solución completa para tu negocio</div>
-                <div class="price">$120.000</div>
-                <div class="price-currency">Pesos argentinos</div>
+                <div style="font-size: 1.5rem; color: #007bff; font-weight: bold; margin: 20px 0;">Consulta personalizada</div>
                 
                 <ul class="features-list">
                     <li><i class="fas fa-check"></i> Páginas ilimitadas</li>
@@ -397,7 +393,7 @@ require_once 'includes/functions.php';
                 </ul>
                 
                 <div class="pricing-cta">
-                    <a href="/#contacto" class="btn btn-primary">Solicitar</a>
+                    <a href="/#contacto" class="btn btn-primary">Consultar</a>
                 </div>
             </div>
         </div>
@@ -408,7 +404,7 @@ require_once 'includes/functions.php';
         <div class="container">
             <div class="transparency-content">
                 <h2>🔍 Transparencia Total</h2>
-                <p>No hay costos ocultos ni sorpresas. Todos los paquetes incluyen dominio .ar, casilla de correo profesional y hosting por 1 año.</p>
+                <p>No hay costos ocultos ni sorpresas. Te damos un presupuesto claro y transparente según tus necesidades específicas.</p>
                 
                 <div class="transparency-grid">
                     <div class="transparency-item">
