@@ -19,9 +19,13 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          # Opciones de seguridad para evitar 530 de hostings compartidos
+          security: loose
+          # Directorios
           local-dir: ./
           server-dir: /public_html/
-          # excluye archivos que no deberían subir a producción
           exclude: |
             **/.git*
             **/.git*/**
