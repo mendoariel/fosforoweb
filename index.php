@@ -46,7 +46,7 @@ try {
     <meta property="og:title" content="Software a Medida y Soluciones Digitales Reales | Fosforo Web">
     <meta property="og:description"
         content="Desarrollo de sistemas a medida y aplicaciones web funcionando en producción.">
-    <meta property="og:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
+    <meta property="og:image" content="https://fosforoweb.com.ar/assets/images/logo-main.png">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="Fosforo Web">
 
@@ -56,14 +56,14 @@ try {
     <meta property="twitter:title" content="Software a Medida y Soluciones Digitales Reales | Fosforo Web">
     <meta property="twitter:description"
         content="Desarrollo de sistemas a medida y aplicaciones web funcionando en producción.">
-    <meta property="twitter:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
+    <meta property="twitter:image" content="https://fosforoweb.com.ar/assets/images/logo-main.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="favicon.png?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png?v=3">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png?v=3">
     <link rel="shortcut icon" href="favicon.ico?v=2">
 
     <!-- Google Fonts -->
@@ -98,8 +98,8 @@ try {
         },
         "openingHours": "Mo-Fr 09:00-18:00",
         "priceRange": "$$",
-        "image": "https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg",
-        "logo": "https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg",
+        "image": "https://fosforoweb.com.ar/assets/images/logo-main.png",
+        "logo": "https://fosforoweb.com.ar/assets/images/logo-main.png",
         "sameAs": [
             "https://fosforoweb.com.ar"
         ],
@@ -199,7 +199,7 @@ try {
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="#inicio" class="nav-logo-link">
-                        <img src="assets/images/qr-logo-fosforo.svg" alt="Fosforo Web QR Logo" class="nav-logo-img">
+                        <img src="assets/images/logo-main.png" alt="Fosforo Web Logo" class="nav-logo-img">
                         <h2 class="nav-logo-text"><?php echo SITE_NAME; ?></h2>
                     </a>
                 </div>
@@ -242,7 +242,8 @@ try {
                     No vendemos ideas abstractas. Construimos sistemas reales, operativos y garantizados.
                 </p>
                 <p class="hero-description">
-                    Desarrollamos plataformas escalables diseñadas para resolver problemas concretos de tu negocio hoy mismo. Mirá nuestros casos de éxito en producción.
+                    Desarrollamos plataformas escalables diseñadas para resolver problemas concretos de tu negocio hoy
+                    mismo. Mirá nuestros casos de éxito en producción.
                 </p>
                 <div class="hero-buttons">
                     <a href="#portfolio" class="btn btn-primary">
@@ -259,20 +260,23 @@ try {
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Nuestros Sistemas Activos</h2>
-                <p class="section-subtitle">Casos de éxito reales que demuestran nuestra capacidad para dar soluciones prácticas
+                <p class="section-subtitle">Casos de éxito reales que demuestran nuestra capacidad para dar soluciones
+                    prácticas
                 </p>
             </div>
 
             <div class="portfolio-grid">
                 <!-- Project 1: PeludosClick -->
-                <a href="https://peludosclick.com/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                <a href="https://peludosclick.com/" target="_blank"
+                    style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
                     <div class="portfolio-image">
                         <i class="fas fa-paw"></i>
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">Plataforma & Ecosistema</span>
                         <h3 class="portfolio-title">Peludos Click</h3>
-                        <p class="portfolio-description">Ecosistema digital integral para dueños de mascotas. Gestión de chapitas QR, control de vacunas, historia clínica y búsqueda de profesionales.</p>
+                        <p class="portfolio-description">Ecosistema digital integral para dueños de mascotas. Gestión de
+                            chapitas QR, control de vacunas, historia clínica y búsqueda de profesionales.</p>
                         <div class="portfolio-tech-stack">
                             <span class="tech-badge">peludosclick.com</span>
                             <span class="tech-badge">Next.js</span>
@@ -282,14 +286,16 @@ try {
                 </a>
 
                 <!-- Project 2: Auditor de Obras -->
-                <a href="https://auditordeobras.com.ar/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                <a href="https://auditordeobras.com.ar/" target="_blank"
+                    style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
                     <div class="portfolio-image">
                         <i class="fas fa-hard-hat"></i>
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">Gestión y Control</span>
                         <h3 class="portfolio-title">Auditor de Obras</h3>
-                        <p class="portfolio-description">Herramienta profesional para llevar el control exhaustivo de obras en construcción, presupuestos, gastos, proveedores y avances de proyectos.</p>
+                        <p class="portfolio-description">Herramienta profesional para llevar el control exhaustivo de
+                            obras en construcción, presupuestos, gastos, proveedores y avances de proyectos.</p>
                         <div class="portfolio-tech-stack">
                             <span class="tech-badge">auditordeobras.com.ar</span>
                             <span class="tech-badge">React</span>
@@ -299,14 +305,17 @@ try {
                 </a>
 
                 <!-- Project 3: Building Manager -->
-                <a href="https://gestionglobalprop.ar/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                <a href="https://gestionglobalprop.ar/" target="_blank"
+                    style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
                     <div class="portfolio-image">
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">SaaS Administrativo</span>
                         <h3 class="portfolio-title">Gestión Global Prop</h3>
-                        <p class="portfolio-description">El sistema definitivo para administradores de consorcios. Simplifica el cálculo de expensas, control de pagos, reportes de deudas y comunicación fluída.</p>
+                        <p class="portfolio-description">El sistema definitivo para administradores de consorcios.
+                            Simplifica el cálculo de expensas, control de pagos, reportes de deudas y comunicación
+                            fluída.</p>
                         <div class="portfolio-tech-stack">
                             <span class="tech-badge">gestionglobalprop.ar</span>
                             <span class="tech-badge">React</span>
