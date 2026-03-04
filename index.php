@@ -12,7 +12,7 @@ try {
     $stmt->execute();
     $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     // Error de conexión - usar servicios por defecto
     $services = [
         ['title' => 'Diseño Web', 'description' => 'Sitios web profesionales y responsivos', 'price' => 50000],
@@ -25,34 +25,39 @@ try {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título optimizado para SEO - v3.0 -->
-    <title>Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web</title>
-    
+    <!-- Título optimizado para SEO - v4.0 -->
+    <title>Software a Medida y Soluciones Digitales Reales | Fosforo Web</title>
+
     <!-- Meta Description optimizada -->
-    <meta name="description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes, empresas y emprendedores en Mendoza, Argentina. ¡Contáctanos!">
-    
+    <meta name="description"
+        content="En Fosforo Web desarrollamos plataformas y aplicaciones a medida que resuelven problemas reales. Conocé nuestros casos de éxito en producción.">
+
     <!-- Meta Keywords actualizadas -->
-    <meta name="keywords" content="primera pagina web, hacer pagina web, crear sitio web, desarrollo web principiantes, diseño web mendoza, pagina web barata, sitio web profesional, desarrollo web argentina, como hacer una pagina web, diseño web economico, pagina web paso a paso, crear pagina web mendoza">
-    
+    <meta name="keywords"
+        content="desarrollo de software a medida, aplicaciones web, soluciones digitales, fosforo web, peludosclick, auditor de obras, building manager, gestion de consorcios">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fosforoweb.com.ar/">
-    <meta property="og:title" content="Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web">
-    <meta property="og:description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes en Mendoza, Argentina.">
+    <meta property="og:title" content="Software a Medida y Soluciones Digitales Reales | Fosforo Web">
+    <meta property="og:description"
+        content="Desarrollo de sistemas a medida y aplicaciones web funcionando en producción.">
     <meta property="og:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="Fosforo Web">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://fosforoweb.com.ar/">
-    <meta property="twitter:title" content="Tu Primera Página Web - Desarrollo Web para Principiantes | Fosforo Web">
-    <meta property="twitter:description" content="¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. Diseño web para principiantes en Mendoza, Argentina.">
+    <meta property="twitter:title" content="Software a Medida y Soluciones Digitales Reales | Fosforo Web">
+    <meta property="twitter:description"
+        content="Desarrollo de sistemas a medida y aplicaciones web funcionando en producción.">
     <meta property="twitter:image" content="https://fosforoweb.com.ar/assets/images/qr-logo-fosforo.svg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
@@ -60,21 +65,22 @@ try {
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg?v=2">
     <link rel="shortcut icon" href="favicon.ico?v=2">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.2">
-    <link rel="stylesheet" href="assets/css/colors.css?v=1.2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style-modern.css?v=1.4">
+    <link rel="stylesheet" href="assets/css/colors.css?v=1.4">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Schema Markup para SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Fosforo Web",
-        "description": "Desarrollo web profesional para principiantes. Creamos tu primera página web desde cero con diseño moderno y responsive.",
+        "description": "Desarrollamos software escalable y a medida, con un enfoque en mostrar rápidamente soluciones web funcionando en producción.",
         "url": "https://fosforoweb.com.ar",
         "telephone": "+542615597977",
         "email": "info@fosforoweb.com.ar",
@@ -142,7 +148,7 @@ try {
         }
     }
     </script>
-    
+
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -185,6 +191,7 @@ try {
     }
     </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -201,13 +208,7 @@ try {
                         <a href="#inicio" class="nav-link active">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pagina-web-72-horas.php" class="nav-link" style="color: #ff6b35; font-weight: bold;">72 Horas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/guia-primera-pagina-web.php" class="nav-link">Guía</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/precios-pagina-web.php" class="nav-link">Precios</a>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a href="#servicios" class="nav-link">Servicios</a>
@@ -225,262 +226,100 @@ try {
         </nav>
     </header>
 
+
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero hero-professional">
         <div class="hero-container">
             <div class="hero-content">
-                <div style="background: linear-gradient(135deg, #ff6b35, #f7931e); color: white; padding: 10px 20px; border-radius: 25px; display: inline-block; margin-bottom: 20px; font-weight: bold; animation: pulse 2s infinite;">
-                    🔥 NUEVO: PÁGINA WEB EN 72 HORAS 🔥
+                <div
+                    style="background: rgba(37, 99, 235, 0.1); color: var(--accent-color); padding: 8px 20px; border-radius: 50px; display: inline-block; margin-bottom: 20px; font-weight: 600; border: 1px solid rgba(37, 99, 235, 0.2);">
+                    SOLUCIONES REALES Y FUNCIONANDO
                 </div>
                 <h1 class="hero-title">
-                    <span class="highlight">Tu Primera Página Web</span> Profesional
+                    Software a Medida <br><span class="highlight">Listo para Usar</span>
                 </h1>
+                <p class="hero-subtitle">
+                    No vendemos ideas abstractas. Construimos sistemas reales, operativos y garantizados.
+                </p>
                 <p class="hero-description">
-                    ¿Quieres hacer tu primera página web? Te ayudamos a crear tu sitio web profesional desde cero. 
-                    <strong>¿Necesitas resultados YA? Tenemos servicio express de 72 horas.</strong>
-                    Diseño web para principiantes, empresas y emprendedores. ¡Es más fácil de lo que crees!
+                    Desarrollamos plataformas escalables diseñadas para resolver problemas concretos de tu negocio hoy mismo. Mirá nuestros casos de éxito en producción.
                 </p>
                 <div class="hero-buttons">
-                    <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: #ff6b35; border-color: #ff6b35;">
-                        <i class="fas fa-rocket"></i> 72 Horas Express
+                    <a href="#portfolio" class="btn btn-primary">
+                        Ver Portfolio
                     </a>
-                    <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
-                    <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
-                       class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-graphic">
-                    <i class="fas fa-rocket"></i>
+                    <a href="#contacto" class="btn btn-secondary">Contactar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección para Principiantes -->
-    <section class="beginners-section">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <!-- Título principal mejorado -->
             <div class="section-header">
-                <h2 class="section-title">Tu Primera Página Web en 4 Pasos Simples</h2>
-                <p class="section-subtitle">Un proceso diseñado especialmente para principiantes. Sin complicaciones, sin sorpresas.</p>
-            </div>
-            
-            <!-- Proceso en timeline vertical -->
-            <div class="process-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>1. Consultoría Gratuita</h3>
-                        <p>Analizamos tus necesidades y te explicamos todo el proceso de forma sencilla. Sin compromisos.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>2. Diseño Personalizado</h3>
-                        <p>Creamos un diseño único para tu negocio, adaptado a tu marca y objetivos específicos.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>3. Desarrollo Profesional</h3>
-                        <p>Programamos tu sitio web con las mejores tecnologías y estándares actuales del mercado.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>4. Capacitación Incluida</h3>
-                        <p>Te enseñamos a gestionar tu sitio web para que puedas actualizarlo tú mismo cuando quieras.</p>
-                    </div>
-                </div>
-            </div>
-                
-            
-            <!-- Beneficios destacados -->
-            <div class="benefits-showcase">
-                <h3>¿Por qué somos la mejor opción para tu primera página web?</h3>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h4 class="benefit-title">Experiencia con Principiantes</h4>
-                        <p class="benefit-description">Sabemos cómo explicarte todo de forma sencilla</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h4 class="benefit-title">Precios Accesibles</h4>
-                        <p class="benefit-description">Paquetes diseñados para emprendedores</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h4 class="benefit-title">Soporte Completo</h4>
-                        <p class="benefit-description">Te acompañamos durante todo el proceso</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4 class="benefit-title">Garantía Total</h4>
-                        <p class="benefit-description">Tu sitio funcionará perfectamente</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4 class="benefit-title">Sin Conocimientos Técnicos</h4>
-                        <p class="benefit-description">Nos encargamos de toda la parte técnica</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-            <div class="cta-section">
-                <h3>¿Listo para crear tu primera página web?</h3>
-                <p>Contáctanos y te ayudamos a dar el primer paso hacia tu presencia online profesional.</p>
-                <div class="cta-buttons">
-                    <a href="/guia-primera-pagina-web.php" class="btn btn-secondary">Ver Guía Paso a Paso</a>
-                    <a href="/precios-pagina-web.php" class="btn btn-primary">Ver Precios</a>
-                    <a href="https://wa.me/542615597977?text=Hola!%20Quiero%20crear%20mi%20primera%20página%20web" 
-                       class="btn btn-whatsapp" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> Consulta Gratuita
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicio 72 Horas Section -->
-    <section class="express-service-section" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 80px 0; position: relative; overflow: hidden;">
-        <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                <h2 class="section-title" style="color: white; font-size: 3rem; margin-bottom: 20px;">
-                    🚀 ¿Necesitas tu página web YA?
-                </h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9); font-size: 1.3rem;">
-                    Servicio express: Tu página web profesional lista en solo 72 horas
+                <h2 class="section-title">Nuestros Sistemas Activos</h2>
+                <p class="section-subtitle">Casos de éxito reales que demuestran nuestra capacidad para dar soluciones prácticas
                 </p>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0;">
-                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                    <img src="assets/images/flayers-01.png" alt="Flyer 72 Horas" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">72 Horas Garantizadas</h3>
-                    <p>Entregamos tu sitio web en máximo 72 horas o te devolvemos el 50% del dinero.</p>
-                </div>
-                
-                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                    <img src="assets/images/flayers-02.png" alt="Proceso Express" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Proceso Express</h3>
-                    <p>Consulta de 15 min, diseño aprobado en 6 horas, desarrollo en 24 horas, ¡listo!</p>
-                </div>
-                
-                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                    <img src="assets/images/flayers-03.png" alt="Calidad Garantizada" style="width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 15px;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Calidad Garantizada</h3>
-                    <p>Diseño responsive, optimizado para SEO, y funcionando perfectamente en todos los dispositivos.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: white; color: #ff6b35; padding: 20px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; text-decoration: none; display: inline-block; margin: 10px;">
-                    <i class="fas fa-rocket"></i> ¡QUIERO MI PÁGINA EN 72H!
-                </a>
-                <a href="https://wa.me/542615597977?text=Hola!%20Necesito%20mi%20página%20web%20en%2072%20horas%20URGENTE" 
-                   class="btn btn-whatsapp" target="_blank" rel="noopener" style="background: #25d366; color: white; padding: 20px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; text-decoration: none; display: inline-block; margin: 10px;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Express
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Flyers Gallery Section -->
-    <section class="flyers-gallery" style="background: #f8f9fa; padding: 80px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nuestro Servicio Express en Imágenes</h2>
-                <p class="section-subtitle">Descubre cómo funciona nuestro servicio de 72 horas</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 50px 0;">
-                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
-                    <img src="assets/images/flayers-01.png" alt="Flyer 72 Horas" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
-                    <h3 style="color: #ff6b35; margin-bottom: 15px;">72 Horas Garantizadas</h3>
-                    <p>Tu página web lista en máximo 72 horas o te devolvemos el 50% del dinero.</p>
-                </div>
-                
-                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
-                    <img src="assets/images/flayers-02.png" alt="Proceso Express" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
-                    <h3 style="color: #ff6b35; margin-bottom: 15px;">Proceso Optimizado</h3>
-                    <p>Consulta express, diseño aprobado, desarrollo acelerado. Todo en tiempo récord.</p>
-                </div>
-                
-                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center;">
-                    <img src="assets/images/flayers-03.png" alt="Calidad Garantizada" style="width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px;">
-                    <h3 style="color: #ff6b35; margin-bottom: 15px;">Calidad Premium</h3>
-                    <p>Diseño responsive, SEO optimizado, y funcionando perfectamente en todos los dispositivos.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="/pagina-web-72-horas.php" class="btn btn-primary" style="background: #ff6b35; border-color: #ff6b35; padding: 20px 40px; font-size: 1.2rem;">
-                    <i class="fas fa-rocket"></i> Ver Servicio Completo
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- QR Showcase Section -->
-    <section class="qr-showcase">
-        <div class="container">
-            <div class="qr-showcase-content">
-                <div class="qr-info">
-                    <h2 class="section-title">Nuestra Marca Única</h2>
-                    <p class="section-subtitle">Transformamos códigos QR en experiencias visuales únicas</p>
-                    <div class="qr-features">
-                        <div class="feature-item">
-                            <i class="fas fa-magic"></i>
-                            <span>Diseño personalizado con tu marca</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Efectos visuales y animaciones</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Funcionalidad garantizada</span>
+            <div class="portfolio-grid">
+                <!-- Project 1: PeludosClick -->
+                <a href="https://peludosclick.com/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">Plataforma & Ecosistema</span>
+                        <h3 class="portfolio-title">Peludos Click</h3>
+                        <p class="portfolio-description">Ecosistema digital integral para dueños de mascotas. Gestión de chapitas QR, control de vacunas, historia clínica y búsqueda de profesionales.</p>
+                        <div class="portfolio-tech-stack">
+                            <span class="tech-badge">peludosclick.com</span>
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">QR Dynamics</span>
                         </div>
                     </div>
-                </div>
-                <div class="qr-visual">
-                    <div class="qr-container">
-                        <img src="assets/images/qr-logo-fosforo.svg" alt="Fosforo Web QR Logo" class="qr-logo">
+                </a>
+
+                <!-- Project 2: Auditor de Obras -->
+                <a href="https://auditordeobras.com.ar/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-hard-hat"></i>
                     </div>
-                </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">Gestión y Control</span>
+                        <h3 class="portfolio-title">Auditor de Obras</h3>
+                        <p class="portfolio-description">Herramienta profesional para llevar el control exhaustivo de obras en construcción, presupuestos, gastos, proveedores y avances de proyectos.</p>
+                        <div class="portfolio-tech-stack">
+                            <span class="tech-badge">auditordeobras.com.ar</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">API Rest</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3: Building Manager -->
+                <a href="https://gestionglobalprop.ar/" target="_blank" style="text-decoration: none; color: inherit; display: block;" class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-tag">SaaS Administrativo</span>
+                        <h3 class="portfolio-title">Gestión Global Prop</h3>
+                        <p class="portfolio-description">El sistema definitivo para administradores de consorcios. Simplifica el cálculo de expensas, control de pagos, reportes de deudas y comunicación fluída.</p>
+                        <div class="portfolio-tech-stack">
+                            <span class="tech-badge">gestionglobalprop.ar</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="#contacto" class="btn btn-primary" style="padding: 1rem 3rem;">
+                    Resolvé tu problema hoy
+                </a>
             </div>
         </div>
     </section>
@@ -489,22 +328,46 @@ try {
     <section id="servicios" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestros Servicios</h2>
-                <p class="section-subtitle">Soluciones completas para tu presencia digital</p>
+                <h2 class="section-title">Servicios Profesionales</h2>
+                <p class="section-subtitle">Soluciones tecnológicas de alto nivel para escalar tu negocio</p>
             </div>
-            
+
             <div class="services-grid">
-                <?php foreach ($services as $service): ?>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-<?php echo getServiceIcon($service['title']); ?>"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3 class="service-title"><?php echo htmlspecialchars($service['title']); ?></h3>
-                    <p class="service-description"><?php echo htmlspecialchars($service['description']); ?></p>
-                    <!-- Precios ocultos - consultar por WhatsApp -->
-                    <a href="#contacto" class="service-btn">Consultar</a>
+                    <h3 class="service-title">Desarrollo a Medida</h3>
+                    <p class="service-description">Creamos software diseñado específicamente para resolver los desafíos
+                        únicos de tu empresa, asegurando escalabilidad y rendimiento.</p>
                 </div>
-                <?php endforeach; ?>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Aplicaciones Móviles</h3>
+                    <p class="service-description">Desarrollo de apps nativas y multiplataforma con experiencias de
+                        usuario fluidas y diseños modernos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">E-commerce Avanzado</h3>
+                    <p class="service-description">Plataformas de venta online robustas, con integraciones de pago,
+                        gestión de stock y conexiones con ERPs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="service-title">Soluciones Cloud</h3>
+                    <p class="service-description">Arquitectura de software en la nube, migraciones y optimización de
+                        infraestructura para máxima disponibilidad.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -514,42 +377,52 @@ try {
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">¿Por qué elegirnos?</h2>
+                    <h2 class="section-title" style="text-align: left !important;">Ingeniería de Software de Calidad
+                    </h2>
                     <p class="about-description">
-                        Somos un equipo apasionado por la tecnología y el diseño, especializados en crear 
-                        experiencias digitales que conectan con tu audiencia y generan resultados.
+                        En Fosforo Web no solo escribimos código; construimos activos digitales que generan valor.
+                        Nuestro enfoque combina ingeniería robusta con diseño intuitivo.
+                    </p>
+                    <p class="about-description">
+                        Nos especializamos en proyectos complejos donde la performance, la seguridad y la experiencia de
+                        usuario son críticos.
                     </p>
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Diseño profesional y moderno</span>
+                            <span>Metodologías Ágiles</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Desarrollo responsive</span>
+                            <span>Código Limpio y Mantenible</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Soporte técnico continuo</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Optimización SEO</span>
+                            <span>Diseño UX/UI Centrado en Usuario</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-stats">
-                    <div class="stat">
-                        <h3 class="stat-number">50+</h3>
-                        <p class="stat-label">Proyectos Completados</p>
+                    <div class="stat-item">
+                        <div style="flex: 1;">
+                            <h3 class="stat-number">5+</h3>
+                            <p class="stat-label">Años de Experiencia</p>
+                        </div>
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <div class="stat">
-                        <h3 class="stat-number">100%</h3>
-                        <p class="stat-label">Clientes Satisfechos</p>
+                    <div class="stat-item">
+                        <div style="flex: 1;">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Proyectos Exitosos</p>
+                        </div>
+                        <i class="fas fa-project-diagram"></i>
                     </div>
-                    <div class="stat">
-                        <h3 class="stat-number">24/7</h3>
-                        <p class="stat-label">Soporte Técnico</p>
+                    <div class="stat-item">
+                        <div style="flex: 1;">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label">Compromiso</p>
+                        </div>
+                        <i class="fas fa-handshake"></i>
                     </div>
                 </div>
             </div>
@@ -560,10 +433,10 @@ try {
     <section id="contacto" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contactanos</h2>
-                <p class="section-subtitle">¿Listo para encender tu presencia online?</p>
+                <h2 class="section-title">Hablemos de tu Proyecto</h2>
+                <p class="section-subtitle">Consultoría inicial gratuita para evaluar la viabilidad de tu idea</p>
             </div>
-            
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -592,14 +465,14 @@ try {
                         <div>
                             <h4>WhatsApp</h4>
                             <p>+54 261 559-7977</p>
-                            <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
-                               class="whatsapp-btn" target="_blank" rel="noopener">
+                            <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web"
+                                class="whatsapp-btn" target="_blank" rel="noopener">
                                 <i class="fab fa-whatsapp"></i> Chatear por WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <form class="contact-form" action="contact-handler.php" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Tu nombre" required>
@@ -630,7 +503,8 @@ try {
                             <h4><?php echo SITE_NAME; ?></h4>
                             <p class="footer-tagline">Encendemos tu presencia online</p>
                         </div>
-                        <p class="footer-description">Creamos soluciones digitales profesionales que impulsan tu negocio hacia el éxito digital. Desde el diseño hasta el marketing, te acompañamos en cada paso.</p>
+                        <p class="footer-description">Creamos soluciones digitales profesionales que impulsan tu negocio
+                            hacia el éxito digital. Desde el diseño hasta el marketing, te acompañamos en cada paso.</p>
                         <div class="social-links">
                             <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -638,7 +512,7 @@ try {
                             <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
-                    
+
                     <!-- Sección Servicios -->
                     <div class="footer-section">
                         <h4>Nuestros Servicios</h4>
@@ -652,7 +526,7 @@ try {
                             <li><a href="#servicios"><i class="fas fa-tools"></i> Mantenimiento</a></li>
                         </ul>
                     </div>
-                    
+
                     <!-- Sección Enlaces -->
                     <div class="footer-section">
                         <h4>Enlaces Útiles</h4>
@@ -665,7 +539,7 @@ try {
                             <li><a href="#"><i class="fas fa-gavel"></i> Términos y Condiciones</a></li>
                         </ul>
                     </div>
-                    
+
                     <!-- Sección Contacto -->
                     <div class="footer-section">
                         <h4>Contacto</h4>
@@ -702,7 +576,7 @@ try {
                     </div>
                 </div>
             </div>
-            
+
             <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
@@ -718,11 +592,11 @@ try {
     </footer>
 
     <script src="assets/js/main.js"></script>
-    
+
     <!-- Botón flotante de WhatsApp -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web" 
-           class="whatsapp-float-btn" target="_blank" rel="noopener" title="Chatear por WhatsApp">
+        <a href="https://wa.me/542615597977?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20desarrollo%20web"
+            class="whatsapp-float-btn" target="_blank" rel="noopener" title="Chatear por WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <div class="whatsapp-tooltip">
@@ -730,13 +604,15 @@ try {
             <div class="whatsapp-tooltip-arrow"></div>
         </div>
     </div>
-    
-           <!-- Debug Information (removed for production) -->
+
+    <!-- Debug Information (removed for production) -->
 </body>
+
 </html>
 
 <?php
-function getServiceIcon($title) {
+function getServiceIcon($title)
+{
     $icons = [
         'Diseño Web' => 'paint-brush',
         'Marketing Digital' => 'chart-line',
@@ -746,7 +622,7 @@ function getServiceIcon($title) {
         'Hosting' => 'server',
         'Mantenimiento' => 'tools'
     ];
-    
+
     return $icons[$title] ?? 'star';
 }
 ?>

@@ -14,7 +14,12 @@ section {
     padding: 80px 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
 }
@@ -36,30 +41,48 @@ img {
 /* Paleta de colores moderna y profesional */
 :root {
     /* Colores principales - Nueva paleta Fosforo Web */
-    --primary-color: #2563EB; /* Azul principal */
-    --secondary-color: #1D4ED8; /* Azul oscuro */
-    --accent-color: #3B82F6; /* Azul claro */
-    --success-color: #10B981; /* Verde éxito */
-    --warning-color: #F59E0B; /* Naranja accent */
-    --highlight-color: #ffffff; /* Blanco brillante */
-    
+    --primary-color: #2563EB;
+    /* Azul principal */
+    --secondary-color: #1D4ED8;
+    /* Azul oscuro */
+    --accent-color: #3B82F6;
+    /* Azul claro */
+    --success-color: #10B981;
+    /* Verde éxito */
+    --warning-color: #F59E0B;
+    /* Naranja accent */
+    --highlight-color: #ffffff;
+    /* Blanco brillante */
+
     /* Colores de fondo */
-    --bg-dark: #1F2937; /* Gris oscuro moderno */
-    --bg-darker: #111827; /* Gris más oscuro */
-    --bg-light: #F3F4F6; /* Gris claro suave */
-    --card-bg: #ffffff; /* Blanco puro */
-    --text-dark: #1F2937; /* Texto principal */
-    --text-secondary: #4B5563; /* Texto secundario más oscuro para mejor contraste */
-    --text-muted: #6B7280; /* Texto atenuado */
-    
+    --bg-dark: #1F2937;
+    /* Gris oscuro moderno */
+    --bg-darker: #111827;
+    /* Gris más oscuro */
+    --bg-light: #F3F4F6;
+    /* Gris claro suave */
+    --card-bg: #ffffff;
+    /* Blanco puro */
+    --text-dark: #1F2937;
+    /* Texto principal */
+    --text-secondary: #4B5563;
+    /* Texto secundario más oscuro para mejor contraste */
+    --text-muted: #6B7280;
+    /* Texto atenuado */
+
     /* Colores de texto */
-    --text-color: #ffffff; /* Blanco para texto principal */
-    --text-light: #e0e0e0; /* Gris claro */
-    --text-muted: #b0b0b0; /* Gris medio */
-    --text-dark: #333333; /* Texto oscuro para cards */
-    
+    --text-color: #ffffff;
+    /* Blanco para texto principal */
+    --text-light: #e0e0e0;
+    /* Gris claro */
+    --text-muted: #b0b0b0;
+    /* Gris medio */
+    --text-dark: #333333;
+    /* Texto oscuro para cards */
+
     /* Efectos */
-    --glow-color: rgba(0, 212, 255, 0.3); /* Brillo azul */
+    --glow-color: rgba(0, 212, 255, 0.3);
+    /* Brillo azul */
     --border-radius: 12px;
     --box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
     --box-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -245,8 +268,15 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
 }
 
 .hero-content {
@@ -438,7 +468,8 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -448,7 +479,8 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #1F2937 !important; /* OSCURO para fondo claro */
+    color: #1F2937 !important;
+    /* OSCURO para fondo claro */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -460,7 +492,8 @@ body {
 .footer .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     margin-bottom: 3rem;
     opacity: 0.9;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -470,7 +503,8 @@ body {
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: #6B7280 !important; /* GRIS para fondo claro */
+    color: #6B7280 !important;
+    /* GRIS para fondo claro */
     margin-bottom: 3rem;
     opacity: 1;
     text-shadow: none;
@@ -481,46 +515,55 @@ body {
 /* Lista de beneficios en secciones oscuras */
 .about .benefits-list li,
 .services .benefits-list li {
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
-    background: rgba(255, 255, 255, 0.1) !important; /* Fondo semi-transparente */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
+    background: rgba(255, 255, 255, 0.1) !important;
+    /* Fondo semi-transparente */
 }
 
 /* Enlaces del footer */
 .footer-links a {
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
 }
 
 .footer-links a:hover {
-    color: #3B82F6 !important; /* Azul claro al hacer hover */
+    color: #3B82F6 !important;
+    /* Azul claro al hacer hover */
 }
 
 /* Texto del footer */
 .footer p,
 .footer span {
-    color: #E5E7EB !important; /* Gris muy claro para fondo oscuro */
+    color: #E5E7EB !important;
+    /* Gris muy claro para fondo oscuro */
 }
 
 /* Títulos en páginas de precios y guía */
 .pricing-hero h1,
 .guide-hero h1 {
-    color: #FFFFFF !important; /* BLANCO para fondo azul */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo azul */
 }
 
 .pricing-hero p,
 .guide-hero p {
-    color: #FFFFFF !important; /* BLANCO para fondo azul */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo azul */
 }
 
 /* FAQ en páginas de precios */
 .faq-section h2 {
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
 }
 
 /* CTA sections */
 .cta-section h2,
 .cta-section h3,
 .cta-section p {
-    color: #FFFFFF !important; /* BLANCO para fondo azul */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo azul */
 }
 
 .services-grid {
@@ -596,7 +639,8 @@ body {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     text-shadow: 0 0 15px var(--glow-color);
-    display: none; /* Ocultar precios temporalmente */
+    display: none;
+    /* Ocultar precios temporalmente */
 }
 
 .service-btn {
@@ -631,14 +675,16 @@ body {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     font-weight: 700;
 }
 
 .about-text p {
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     margin-bottom: 1.5rem;
     line-height: 1.7;
     opacity: 0.9;
@@ -675,7 +721,8 @@ body {
 .stat-item span {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-color) !important; /* Azul para mejor contraste */
+    color: var(--primary-color) !important;
+    /* Azul para mejor contraste */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -683,7 +730,8 @@ body {
 .stat-number {
     font-size: 3rem !important;
     font-weight: 800 !important;
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     line-height: 1;
     margin-bottom: 0.5rem;
@@ -692,7 +740,8 @@ body {
 .stat-label {
     font-size: 1rem !important;
     font-weight: 500 !important;
-    color: #FFFFFF !important; /* BLANCO para fondo oscuro */
+    color: #FFFFFF !important;
+    /* BLANCO para fondo oscuro */
     opacity: 0.9;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -1018,8 +1067,15 @@ body {
 }
 
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Hero Image/Graphic */
@@ -1051,17 +1107,28 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 @keyframes pulse {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.8;
     }
-    50% { 
+
+    50% {
         transform: scale(1.05);
         opacity: 1;
     }
@@ -1092,95 +1159,95 @@ body {
     .nav-menu {
         display: none;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     .nav-logo-img {
         width: 40px;
         height: 40px;
     }
-    
+
     .nav-logo-text {
         font-size: 1.4rem;
     }
-    
+
     .nav-logo-link {
         gap: 8px;
     }
-    
+
     .hero-container {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
-    
+
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-description {
         font-size: 1.2rem;
         max-width: 100%;
     }
-    
+
     .hero-buttons {
         justify-content: center;
     }
-    
+
     .hero-image {
         flex: none;
         order: -1;
     }
-    
+
     .hero-graphic {
         width: 200px;
         height: 200px;
     }
-    
+
     .hero-graphic i {
         font-size: 5rem;
     }
-    
+
     .about-content,
     .contact-content {
         grid-template-columns: 1fr;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /* QR Showcase responsive */
     .qr-showcase-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
-    
+
     .qr-container {
         width: 250px;
         height: 250px;
     }
-    
+
     .qr-logo {
         max-width: 250px;
         max-height: 250px;
     }
-    
+
     /* Footer responsive */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .footer-bottom-content {
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
     }
-    
+
     .social-links {
         justify-content: center;
     }
@@ -1192,6 +1259,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1318,9 +1386,11 @@ html {
     0% {
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     }
+
     50% {
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
     }
+
     100% {
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     }
@@ -1368,20 +1438,20 @@ html {
         bottom: 15px;
         right: 15px;
     }
-    
+
     .whatsapp-float-btn {
         width: 50px;
         height: 50px;
         font-size: 24px;
     }
-    
+
     .whatsapp-tooltip {
         bottom: 60px;
         right: -10px;
         font-size: 12px;
         padding: 8px 12px;
     }
-    
+
     .whatsapp-tooltip-arrow {
         right: 25px;
     }
@@ -1412,6 +1482,7 @@ html {
         opacity: 0;
         transform: translateY(20px) scale(0.8);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -1564,7 +1635,8 @@ html {
 }
 
 .beginners-benefits h3 {
-    color: var(--text-dark) !important; /* Texto más oscuro para mejor contraste */
+    color: var(--text-dark) !important;
+    /* Texto más oscuro para mejor contraste */
     margin-bottom: 25px;
     font-size: 24px;
     font-weight: 700;
@@ -1672,10 +1744,13 @@ html {
 
 /* Animación del pulso */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.7;
@@ -1751,45 +1826,186 @@ html {
     .process-timeline::before {
         left: 30px;
     }
-    
+
     .timeline-item {
         flex-direction: column !important;
         align-items: flex-start;
         padding-left: 80px;
     }
-    
+
     .timeline-icon {
         position: absolute;
         left: 0;
         top: 0;
     }
-    
+
     .timeline-content {
         margin: 0;
         max-width: 100%;
         width: 100%;
     }
-    
+
     .benefits-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .cta-section {
         padding: 30px 20px;
     }
-    
+
     .cta-section h3 {
         font-size: 24px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .cta-buttons .btn {
         width: 100%;
         max-width: 300px;
     }
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1f2937, #111827);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-image i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.portfolio-card:hover .portfolio-image i {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    text-shadow: 0 0 30px var(--glow-color);
+}
+
+.portfolio-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    align-self: flex-start;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.portfolio-description {
+    color: #9ca3af;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-badge {
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #d1d5db;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.portfolio-card:hover .tech-badge {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.3);
+    color: #ffffff;
+}
+
+/* Professional Hero Overrides */
+.hero-professional .hero-title {
+    background: linear-gradient(45deg, #ffffff, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+}
+
+.hero-professional .hero-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Fix Portfolio Section Headers */
+.portfolio .section-title {
+    color: #ffffff !important;
+}
+
+.portfolio .section-subtitle {
+    color: #9ca3af !important;
 }
