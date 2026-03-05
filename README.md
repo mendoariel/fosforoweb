@@ -6,6 +6,8 @@
 
 Sitio web corporativo para Fosforo Web, empresa especializada en servicios de desarrollo web, marketing digital y presencia online.
 
+*Última actualización: Favicon configurado con logo corporativo*
+
 ## 🚀 Características
 
 - **Diseño Responsive** - Optimizado para móviles, tablets y desktop
