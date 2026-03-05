@@ -199,7 +199,7 @@ try {
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="#inicio" class="nav-logo-link">
-                        <img src="assets/images/logo-main.png" alt="Fosforo Web Logo" class="nav-logo-img">
+                        <img src="assets/images/logo-main.png?v=2" alt="Fosforo Web Logo" class="nav-logo-img">
                         <h2 class="nav-logo-text"><?php echo SITE_NAME; ?></h2>
                     </a>
                 </div>
